@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 97%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 258 55% 27%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 260 43% 38%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 0 0% 88%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 0 0% 88%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 260 43% 38%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-barber-light text-barber-dark font-sans;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-barber-primary;
+  }
+}
+
+@layer components {
+  .parallax-bg {
+    @apply relative overflow-hidden;
+  }
+  
+  .parallax-bg > div {
+    @apply absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.03);
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold text-barber-primary mb-6;
+  }
+
+  .section-subheading {
+    @apply text-lg text-barber-dark mb-8 max-w-2xl mx-auto;
+  }
+}
+
+/* Utility to prevent content jump on page load */
+html {
+  @apply overflow-x-hidden;
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.barber.light');
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.barber.primary');
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.barber.secondary');
+}
