@@ -1,23 +1,92 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import ParallaxSection from "@/components/ParallaxSection";
 import { Button } from "@/components/ui/button";
 
+// TypeScript declaration for window.sociablekit
+declare global {
+  interface Window {
+    sociablekit?: {
+      initSocialFeed: () => void;
+      widgets: Array<unknown>;
+    };
+  }
+}
+
+// Create a GoogleReviews component that will use SociableKit
+const GoogleReviews = () => {
+  const reviewsContainerRef = useRef<HTMLDivElement>(null);
+  const isScriptLoaded = useRef(false);
+
+  useEffect(() => {
+    // Only load the script once
+    if (!isScriptLoaded.current) {
+      isScriptLoaded.current = true;
+
+      // Create and append the script
+      const script = document.createElement('script');
+      script.src = 'https://widgets.sociablekit.com/google-reviews/widget.js';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+
+      // Initialize once the script loads
+      script.onload = () => {
+        // Clean up any existing widgets before re-initializing
+        if (window.sociablekit) {
+          window.sociablekit.widgets = [];
+          window.sociablekit.initSocialFeed();
+        }
+      };
+
+      // Clean up
+      return () => {
+        if (script.parentNode) {
+          script.parentNode.removeChild(script);
+        }
+      };
+    }
+  }, []);
+
+  return (
+    <div 
+      ref={reviewsContainerRef}
+      className="sk-ww-google-reviews" 
+      data-embed-id="25557924"
+    ></div>
+  );
+};
+
 const Reviews = () => {
+  const [rating, setRating] = useState<string>("4.8");
+  
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    // Load SociableKit script
-    const script = document.createElement('script');
-    script.src = 'https://widgets.sociablekit.com/google-reviews/widget.js';
-    script.defer = true;
-    script.async = true;
-    
-    // Clean up function to remove the script when component unmounts
-    return () => {
-      const existingScript = document.querySelector('script[src="https://widgets.sociablekit.com/google-reviews/widget.js"]');
-      if (existingScript && existingScript.parentNode) {
-        existingScript.parentNode.removeChild(existingScript);
+    // Function to get rating from SociableKit widget
+    const getRating = () => {
+      const ratingElement = document.querySelector('.sk-badge__value');
+      if (ratingElement) {
+        const newRating = ratingElement.textContent || "4.8";
+        setRating(newRating);
       }
+    };
+
+    // Initial check
+    getRating();
+
+    // Check periodically until we find the rating
+    const interval = setInterval(() => {
+      getRating();
+    }, 1000);
+
+    // Clean up interval after 10 seconds
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+    }, 10000);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
     };
   }, []);
   
@@ -42,7 +111,7 @@ const Reviews = () => {
                   </span>
                 ))}
               </div>
-              <span className="text-xl font-semibold">4.84 on Google Reviews</span>
+              <span className="text-xl font-semibold">{rating}/5 on Google Reviews</span>
             </div>
           </div>
         </div>
@@ -52,8 +121,7 @@ const Reviews = () => {
       <section className="py-16 bg-barber-light">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            {/* SociableKit Widget */}
-            <div className="sk-ww-google-reviews" data-embed-id="25557924"></div>
+            <GoogleReviews />
           </div>
         </div>
       </section>
@@ -87,7 +155,7 @@ const Reviews = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Experience Our Service?</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Book your appointment today and see why our clients consistently rate us 4.8+ stars.
+            Book your appointment today and see why our clients consistently rate us {rating}/5 stars.
           </p>
           <Button 
             size="lg"
