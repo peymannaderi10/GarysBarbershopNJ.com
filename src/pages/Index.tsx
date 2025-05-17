@@ -183,7 +183,7 @@ const Index = () => {
                       ))}
                     </div>
                     <p className="text-2xl font-bold">4.8+ Star Rating</p>
-                    <p className="text-white/80">Based on 100+ reviews</p>
+                    <p className="text-white/80">Based on Google Reviews</p>
                   </div>
                 </div>
               </div>
