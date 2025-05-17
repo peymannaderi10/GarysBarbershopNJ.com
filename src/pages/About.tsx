@@ -14,13 +14,13 @@ const storyItems: StoryItem[] = [
     id: 1,
     year: "2010",
     title: "The Beginning",
-    description: "Gar's Barbershop was founded with a simple mission: to provide exceptional grooming services in a welcoming environment."
+    description: "Gary's Barbershop was founded with a simple mission: to provide exceptional grooming services in a welcoming environment."
   },
   {
     id: 2,
     year: "2013",
     title: "Growing Reputation",
-    description: "After three years of hard work and dedication, Gar's Barbershop became known as one of the premier barbershops in Maple Shade."
+    description: "After three years of hard work and dedication, Gary's Barbershop became known as one of the premier barbershops in Maple Shade."
   },
   {
     id: 3,
@@ -45,6 +45,8 @@ const storyItems: StoryItem[] = [
 const About = () => {
   const [visibleItems, setVisibleItems] = useState<{[key: number]: boolean}>({});
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const garyRef = useRef<HTMLDivElement>(null);
+  const [garyVisible, setGaryVisible] = useState(false);
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -67,10 +69,27 @@ const About = () => {
       if (ref) observer.observe(ref);
     });
     
+    // Gary section observer
+    const garyObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setGaryVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    
+    if (garyRef.current) {
+      garyObserver.observe(garyRef.current);
+    }
+    
     return () => {
       itemRefs.current.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
+      if (garyRef.current) {
+        garyObserver.unobserve(garyRef.current);
+      }
     };
   }, []);
   
@@ -116,7 +135,7 @@ const About = () => {
               >
                 <div className="mr-8">
                   <div className="flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-full bg-barber-button text-white flex items-center justify-center font-bold">
+                    <div className="w-12 h-12 rounded-full bg-barber-primary text-white flex items-center justify-center font-bold">
                       {index + 1}
                     </div>
                     {index < storyItems.length - 1 && (
@@ -141,15 +160,65 @@ const About = () => {
         </div>
       </section>
       
-      {/* Our Philosophy Section */}
+      {/* Meet Gary Section */}
       <section className="py-16 bg-barber-light">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Meet Gary</h2>
+            <p className="section-subheading">
+              The master barber behind every exceptional cut and style
+            </p>
+          </div>
+          
+          <div className="max-w-5xl mx-auto" ref={garyRef}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div 
+                className={`relative overflow-hidden rounded-lg mx-auto w-full max-w-md hover-scale transition-all duration-1000 ${
+                  garyVisible 
+                    ? "opacity-100 transform translate-x-0" 
+                    : "opacity-0 transform -translate-x-24"
+                }`}
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1620574504614-8826dcf4a469?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
+                  alt="Gary - Owner & Master Barber" 
+                  className="object-cover w-full h-full rounded-lg shadow-xl"
+                />
+              </div>
+              
+              <div 
+                className={`bg-white p-8 rounded-lg transition-all duration-1000 ${
+                  garyVisible 
+                    ? "opacity-100 transform translate-x-0" 
+                    : "opacity-0 transform translate-x-24"
+                }`}
+                style={{ transitionDelay: "300ms" }}
+              >
+                <p className="text-barber-accent font-medium mb-4">Owner & Master Barber</p>
+                <p className="text-gray-600 mb-3">
+                  With over 20 years of experience, Gary brings unmatched skill and precision to every haircut. His journey in barbering began with a passion for helping people look and feel their best.
+                </p>
+                <p className="text-gray-600 mb-3">
+                  Specializing in classic cuts, modern styles, and hot towel shaves, Gary's attention to detail and personalized approach keeps clients coming back year after year.
+                </p>
+                <p className="text-gray-600">
+                  As a one-man operation, Gary takes pride in providing consistent, high-quality service where every client receives his full attention and expertise.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Philosophy Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-barber-primary mb-4">Our Philosophy</h2>
                 <p className="text-gray-600 mb-4">
-                  At Gar's Barbershop, we believe that a great haircut is more than just a service—it's an experience. We take pride in our craft and are dedicated to helping you look and feel your best.
+                  At Gary's Barbershop, we believe that a great haircut is more than just a service—it's an experience. We take pride in our craft and are dedicated to helping you look and feel your best.
                 </p>
                 <p className="text-gray-600 mb-4">
                   Our approach combines traditional barbering techniques with modern styles to deliver results that are both classic and contemporary.
@@ -169,91 +238,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      
-      {/* Meet the Team Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Meet Our Skilled Team</h2>
-            <p className="section-subheading">
-              Experienced professionals dedicated to helping you look your best
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Team Member 1 */}
-            <div className="bg-barber-light p-6 rounded-lg text-center hover-scale">
-              <div className="mb-4 relative overflow-hidden rounded-full w-48 h-48 mx-auto">
-                <img 
-                  src="https://images.unsplash.com/photo-1620574504614-8826dcf4a469?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
-                  alt="Gar - Owner & Master Barber" 
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-barber-primary">Gar</h3>
-              <p className="text-barber-accent font-medium">Owner & Master Barber</p>
-              <p className="mt-2 text-gray-600">
-                With over 20 years of experience, Gar brings unmatched skill and precision to every haircut.
-              </p>
-            </div>
-            
-            {/* Team Member 2 */}
-            <div className="bg-barber-light p-6 rounded-lg text-center hover-scale">
-              <div className="mb-4 relative overflow-hidden rounded-full w-48 h-48 mx-auto">
-                <img 
-                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
-                  alt="Mike - Senior Barber" 
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-barber-primary">Mike</h3>
-              <p className="text-barber-accent font-medium">Senior Barber</p>
-              <p className="mt-2 text-gray-600">
-                Specializing in classic cuts and hot towel shaves, Mike's attention to detail is second to none.
-              </p>
-            </div>
-            
-            {/* Team Member 3 */}
-            <div className="bg-barber-light p-6 rounded-lg text-center hover-scale">
-              <div className="mb-4 relative overflow-hidden rounded-full w-48 h-48 mx-auto">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
-                  alt="James - Barber" 
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-barber-primary">James</h3>
-              <p className="text-barber-accent font-medium">Barber</p>
-              <p className="mt-2 text-gray-600">
-                James excels at contemporary styles and is known for his impeccable beard grooming techniques.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* CTA Section */}
-      <ParallaxSection
-        bgImage="https://images.unsplash.com/photo-1585747860715-2ba37e752b3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
-        height="350px"
-        overlayOpacity={0.7}
-      >
-        <div className="flex items-center justify-center h-full">
-          <div className="container mx-auto px-4 text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience the Difference</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Book your appointment today and see why we're Maple Shade's preferred barbershop.
-            </p>
-            <Button 
-              size="lg"
-              className="bg-barber-button hover:bg-barber-button/90 text-white"
-              onClick={() => window.open("https://squareup.com/appointments", "_blank")}
-            >
-              Book Now
-            </Button>
-          </div>
-        </div>
-      </ParallaxSection>
     </div>
   );
 };

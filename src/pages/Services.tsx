@@ -285,7 +285,7 @@ const Services = () => {
             <div className="mt-8 bg-barber-light p-6 rounded-lg">
               <h4 className="font-bold text-lg mb-2">First Time Client?</h4>
               <p className="text-gray-700 mb-4">
-                If this is your first visit to Gar's Barbershop, please arrive 10 minutes early to discuss your preferences and expectations with your barber.
+                If this is your first visit to Gary's Barbershop, please arrive 10 minutes early to discuss your preferences and expectations with your barber.
               </p>
             </div>
           </div>
@@ -293,7 +293,7 @@ const Services = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 bg-barber-primary text-white">
+      <section className="py-16 bg-barber-light text-barber-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready for a Great Haircut?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -301,7 +301,7 @@ const Services = () => {
           </p>
           <Button 
             size="lg"
-            className="bg-barber-button hover:bg-barber-button/90 text-white"
+            className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white border border-barber-primary"
             onClick={() => window.open("https://squareup.com/appointments", "_blank")}
           >
             Book an Appointment

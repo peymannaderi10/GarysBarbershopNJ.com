@@ -135,7 +135,7 @@ const Index = () => {
                   </div>
                 </div>
                 <blockquote className="text-gray-600 italic mb-4">
-                  "Gar's is the only place I trust for my haircuts. Professional service and consistently great results every time. I've been coming here for years and have never had a bad experience."
+                  "Gary's is the only place I trust for my haircuts. Professional service and consistently great results every time. I've been coming here for years and have never had a bad experience."
                 </blockquote>
                 <p className="font-semibold text-barber-primary">— Michael Johnson</p>
                 <p className="text-sm text-gray-500">June 15, 2023</p>
