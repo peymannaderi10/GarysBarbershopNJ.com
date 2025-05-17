@@ -278,7 +278,6 @@ const Services = () => {
                   <li>Cash</li>
                   <li>Credit/Debit Cards</li>
                   <li>Mobile Payment Apps</li>
-                  <li>Gift Certificates Available</li>
                 </ul>
               </div>
             </div>
