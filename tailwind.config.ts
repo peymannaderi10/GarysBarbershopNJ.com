@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -32,7 +31,8 @@ export default {
 				barber: {
 					primary: '#241773', // Ravens purple
 					secondary: '#4B368C', // Lighter purple for hover states
-					accent: '#E0E0E0', // Neutral mid for borders and dividers
+					accent: '#718096', // Darker gray for text accents (similar to gray-600)
+					button: '#E0E0E0', // Original light gray for buttons and UI elements
 					light: '#F7F7F7', // Neutral light for backgrounds
 					dark: '#333333', // Neutral dark for text
 				},

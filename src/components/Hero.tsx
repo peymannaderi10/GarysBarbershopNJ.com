@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -55,7 +54,7 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
               size="lg"
-              className="bg-barber-primary hover:bg-barber-secondary text-white text-lg px-8 py-6"
+              className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white text-lg px-8 py-6"
               onClick={() => window.open("https://squareup.com/appointments", "_blank")}
             >
               Book an Appointment
@@ -63,10 +62,8 @@ const Hero = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="text-white border-white hover:bg-white/10 text-lg px-8 py-6"
-              onClick={() => {
-                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              className="text-barber-primary border-barber-primary hover:bg-barber-primary hover:text-white text-lg px-8 py-6"
+              onClick={() => window.location.href = "/services"}
             >
               Explore Services
             </Button>

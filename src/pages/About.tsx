@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import ParallaxSection from "@/components/ParallaxSection";
 import { Button } from "@/components/ui/button";
@@ -84,7 +83,7 @@ const About = () => {
       >
         <div className="flex items-center justify-center h-full">
           <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">About Us</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up text-white">About Us</h1>
             <p className="text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               A tradition of excellence in men's grooming since 2010
             </p>
@@ -117,11 +116,11 @@ const About = () => {
               >
                 <div className="mr-8">
                   <div className="flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-full bg-barber-accent text-white flex items-center justify-center font-bold">
+                    <div className="w-12 h-12 rounded-full bg-barber-button text-white flex items-center justify-center font-bold">
                       {index + 1}
                     </div>
                     {index < storyItems.length - 1 && (
-                      <div className="w-1 bg-barber-accent/20 flex-grow mt-2"></div>
+                      <div className="w-1 bg-barber-button/20 flex-grow mt-2"></div>
                     )}
                   </div>
                 </div>
@@ -247,7 +246,7 @@ const About = () => {
             </p>
             <Button 
               size="lg"
-              className="bg-barber-accent hover:bg-barber-accent/90 text-white"
+              className="bg-barber-button hover:bg-barber-button/90 text-white"
               onClick={() => window.open("https://squareup.com/appointments", "_blank")}
             >
               Book Now

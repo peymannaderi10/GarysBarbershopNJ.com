@@ -1,4 +1,3 @@
-
 import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -11,20 +10,13 @@ interface Service {
   duration: string;
 }
 
-const services: Service[] = [
+const allServices: Service[] = [
   {
     id: 1,
     name: "Regular Haircut",
     description: "Traditional haircut with clippers and scissors including a hot towel neck shave.",
     price: "$40",
     duration: "30 min"
-  },
-  {
-    id: 2,
-    name: "Beard Trim",
-    description: "Shape and define your beard with precision trimming and styling.",
-    price: "$25",
-    duration: "20 min"
   },
   {
     id: 3,
@@ -38,20 +30,6 @@ const services: Service[] = [
     name: "Hot Towel Shave",
     description: "Traditional straight razor shave with hot towels and premium products.",
     price: "$25",
-    duration: "30 min"
-  },
-  {
-    id: 5,
-    name: "Boy's Haircut",
-    description: "Haircut service for children 10 years of age and under.",
-    price: "$35",
-    duration: "25 min"
-  },
-  {
-    id: 6,
-    name: "Senior Haircut",
-    description: "Haircut service for clients 62 years and older.",
-    price: "$30",
     duration: "30 min"
   }
 ];
@@ -94,8 +72,8 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {allServices.map((service, index) => (
             <div
               key={service.id}
               ref={(el) => (serviceRefs.current[index] = el)}
@@ -132,7 +110,7 @@ const Services = () => {
         <div className="text-center mt-12">
           <Button 
             onClick={() => window.location.href = "/services"}
-            className="bg-barber-accent hover:bg-barber-accent/90 text-white"
+            className="bg-barber-button hover:bg-barber-button/90 text-white"
           >
             View All Services
           </Button>

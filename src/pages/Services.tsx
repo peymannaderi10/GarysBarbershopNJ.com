@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import ParallaxSection from "@/components/ParallaxSection";
 import { Button } from "@/components/ui/button";
@@ -161,7 +160,7 @@ const Services = () => {
       >
         <div className="flex items-center justify-center h-full">
           <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">Our Services</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up text-white">Our Services</h1>
             <p className="text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               Professional grooming services tailored to enhance your look and confidence
             </p>
@@ -303,7 +302,7 @@ const Services = () => {
           </p>
           <Button 
             size="lg"
-            className="bg-barber-accent hover:bg-barber-accent/90 text-white"
+            className="bg-barber-button hover:bg-barber-button/90 text-white"
             onClick={() => window.open("https://squareup.com/appointments", "_blank")}
           >
             Book an Appointment

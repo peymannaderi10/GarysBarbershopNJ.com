@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -9,6 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -44,7 +44,9 @@ const Navbar = () => {
         "fixed w-full z-50 transition-all duration-300",
         scrolled 
           ? "bg-barber-light shadow-lg py-2" 
-          : "bg-transparent py-4"
+          : isHomePage 
+            ? "bg-transparent py-4" 
+            : "bg-barber-primary py-4"
       )}
     >
       <div className="container mx-auto flex justify-between items-center">
@@ -82,7 +84,9 @@ const Navbar = () => {
               "ml-4 transition-colors duration-300",
               scrolled
                 ? "bg-barber-primary hover:bg-barber-secondary text-white"
-                : "bg-white/10 hover:bg-white/20 text-white border border-white/30"
+                : isHomePage
+                  ? "bg-white/10 hover:bg-white/20 text-white border border-white/30"
+                  : "bg-white/20 hover:bg-white/30 text-white border border-white/30"
             )}
             onClick={() => window.open("https://squareup.com/appointments", "_blank")}
           >

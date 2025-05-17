@@ -1,4 +1,3 @@
-
 import { Phone, Mail, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -28,7 +27,7 @@ const ContactInfo = () => {
       <div className="space-y-6">
         {/* Phone */}
         <div className="flex items-start space-x-3">
-          <div className="bg-barber-accent/10 p-3 rounded-full">
+          <div className="bg-barber-button/10 p-3 rounded-full">
             <Phone className="h-6 w-6 text-barber-accent" />
           </div>
           <div>
@@ -39,7 +38,7 @@ const ContactInfo = () => {
         
         {/* Email */}
         <div className="flex items-start space-x-3">
-          <div className="bg-barber-accent/10 p-3 rounded-full">
+          <div className="bg-barber-button/10 p-3 rounded-full">
             <Mail className="h-6 w-6 text-barber-accent" />
           </div>
           <div>
@@ -66,7 +65,7 @@ const ContactInfo = () => {
       {/* Hours */}
       <div className="mt-8">
         <div className="flex items-start space-x-3 mb-4">
-          <div className="bg-barber-accent/10 p-3 rounded-full">
+          <div className="bg-barber-button/10 p-3 rounded-full">
             <Calendar className="h-6 w-6 text-barber-accent" />
           </div>
           <h4 className="font-medium text-gray-800 mt-3">Business Hours</h4>
@@ -87,7 +86,7 @@ const ContactInfo = () => {
       
       {/* Book Button */}
       <Button 
-        className="w-full mt-8 bg-barber-accent hover:bg-barber-accent/90"
+        className="w-full mt-8 bg-barber-button hover:bg-barber-button/90"
         onClick={() => window.open("https://squareup.com/appointments", "_blank")}
       >
         Book an Appointment

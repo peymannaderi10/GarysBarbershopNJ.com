@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import ReviewCard from "@/components/ReviewCard";
 import ParallaxSection from "@/components/ParallaxSection";
@@ -84,7 +83,7 @@ const Reviews = () => {
       >
         <div className="flex items-center justify-center h-full">
           <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">Customer Reviews</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up text-white">Customer Reviews</h1>
             <p className="text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               See what our clients have to say about their experience at Gar's Barbershop
             </p>
@@ -135,7 +134,7 @@ const Reviews = () => {
               Leave a Google Review
             </Button>
             <Button 
-              className="bg-barber-accent hover:bg-barber-accent/90 text-white"
+              className="bg-barber-button hover:bg-barber-button/90 text-white"
               onClick={() => window.open("https://www.facebook.com/GarsBarberShop/reviews/", "_blank")}
             >
               Leave a Facebook Review
@@ -153,7 +152,7 @@ const Reviews = () => {
           </p>
           <Button 
             size="lg"
-            className="bg-barber-accent hover:bg-barber-accent/90 text-white px-8"
+            className="bg-barber-button hover:bg-barber-button/90 text-white px-8"
             onClick={() => window.open("https://squareup.com/appointments", "_blank")}
           >
             Book an Appointment
