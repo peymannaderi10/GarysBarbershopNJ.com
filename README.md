@@ -1,56 +1,19 @@
-# Welcome to your Lovable project
+# Gary's Barbershop Website
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/c77de829-dec0-44dd-96e1-69381f33c277
+This is the official website for Gary's Barbershop, a premier barbershop located in Maple Shade, NJ. The site showcases the services offered, the story behind the business, and allows customers to view reviews and make appointments.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Responsive, mobile-friendly design
+- Information about services and pricing
+- About page with Gary's story
+- Customer reviews integration with Google
+- Online appointment booking
+- Contact information and hours
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/c77de829-dec0-44dd-96e1-69381f33c277) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
@@ -59,15 +22,59 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- React Router
+- React Helmet (for SEO)
 
-## How can I deploy this project?
+## Development Setup
 
-Simply open [Lovable](https://lovable.dev/projects/c77de829-dec0-44dd-96e1-69381f33c277) and click on Share -> Publish.
+To run this project locally, you'll need Node.js and npm installed.
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+# Clone the repository
+git clone <YOUR_GIT_URL>
 
-Yes, you can!
+# Navigate to the project directory
+cd Garys-Barbershop
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Install dependencies
+npm install
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# Start the development server
+npm run dev
+```
+
+## Deployment
+
+To build the project for production:
+
+```sh
+npm run build
+```
+
+This will generate optimized assets in the `dist` folder, which can be deployed to your hosting provider of choice.
+
+## Project Structure
+
+- `src/components`: Reusable UI components
+- `src/pages`: Main page components
+- `src/components/dividers`: Custom divider components for section transitions
+- `src/components/ui`: shadcn-ui components
+
+## SEO & Accessibility
+
+The website is optimized for search engines with:
+- Semantic HTML elements
+- Proper meta tags using React Helmet
+- Structured data for local business
+- Optimized images with alt text
+- Responsive design for all devices
+- Accessibility features for better user experience
+
+## Browser Support
+
+The website is compatible with:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
