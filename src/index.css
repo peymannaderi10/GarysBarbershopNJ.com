@@ -152,6 +152,38 @@ html {
   }
 }
 
+/* Animations for Shape Divider */
+@keyframes shape-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes shape-float {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+/* Animation classes */
 .float-animation {
   animation: float-up 1.2s ease-out forwards;
   animation-play-state: paused;
@@ -171,11 +203,65 @@ html {
   animation-play-state: running !important;
 }
 
+/* Review card animations */
+.slide-left-animation {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 1s cubic-bezier(0.17, 0.67, 0.3, 0.96);
+}
+
+.slide-right-animation {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 1s cubic-bezier(0.17, 0.67, 0.3, 0.96);
+}
+
+.fade-up-animation {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
+}
+
+.animate-review {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+/* Shape divider animations */
+.shape {
+  transition: all 0.5s ease-out;
+}
+
+.animate-shape {
+  animation: shape-appear 0.8s forwards;
+}
+
+.shape:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.shape:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.shape:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+div > .shape {
+  animation: shape-float 1.2s forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .float-animation,
   .scale-animation,
-  .rotate-animation {
+  .rotate-animation,
+  .slide-left-animation,
+  .slide-right-animation,
+  .fade-up-animation,
+  .shape {
     animation: none !important;
+    transition: none !important;
     opacity: 1 !important;
     transform: none !important;
   }

@@ -6,8 +6,7 @@ import { Scissors, Award, Clock, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import WaveDivider from "@/components/dividers/WaveDivider";
 import DiagonalDivider from "@/components/dividers/DiagonalDivider";
-import LottieAnimationDivider from "@/components/dividers/LottieAnimationDivider";
-import ParallaxDivider from "@/components/dividers/ParallaxDivider";
+import ShapeDivider from "@/components/dividers/ShapeDivider";
 
 const Index = () => {
   const whyChooseUsRef = useRef<HTMLDivElement>(null);
@@ -21,18 +20,6 @@ const Index = () => {
       rootMargin: "0px 0px -100px 0px"
     };
     
-    // Observer for review cards
-    const reviewObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-        }
-      });
-    }, observerOptions);
-    
-    const reviewElements = reviewsRef.current?.querySelectorAll('.review-card');
-    reviewElements?.forEach(el => reviewObserver.observe(el));
-    
     // Observer for feature cards with enhanced animations
     const featureObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -45,9 +32,21 @@ const Index = () => {
     const featureElements = whyChooseUsRef.current?.querySelectorAll('.feature-animation');
     featureElements?.forEach(el => featureObserver.observe(el));
     
+    // Observer for review animations
+    const reviewObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-review');
+        }
+      });
+    }, observerOptions);
+    
+    const reviewElements = reviewsRef.current?.querySelectorAll('.review-animation');
+    reviewElements?.forEach(el => reviewObserver.observe(el));
+    
     return () => {
-      reviewObserver.disconnect();
       featureObserver.disconnect();
+      reviewObserver.disconnect();
     };
   }, []);
   
@@ -110,8 +109,8 @@ const Index = () => {
       
       <Services />
       
-      {/* Lottie Animation divider between Services and Reviews */}
-      <LottieAnimationDivider />
+      {/* Shape divider between Services and Reviews */}
+      <ShapeDivider />
       
       {/* What Our Clients Say Section */}
       <section className="py-20 bg-barber-light" ref={reviewsRef}>
@@ -127,7 +126,7 @@ const Index = () => {
             {/* Review Column */}
             <div className="space-y-6">
               {/* Review Card 1 */}
-              <div className="review-card opacity-0 translate-x-8 transition-all duration-700 bg-white p-6 rounded-lg shadow-md">
+              <div className="review-animation slide-left-animation bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="flex items-center mb-4">
                   <div className="flex mr-2">
                     {[...Array(5)].map((_, i) => (
@@ -143,7 +142,7 @@ const Index = () => {
               </div>
               
               {/* Review Card 2 */}
-              <div className="review-card opacity-0 translate-x-8 transition-all duration-700 delay-200 bg-white p-6 rounded-lg shadow-md">
+              <div className="review-animation fade-up-animation bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" style={{ transitionDelay: "0.3s" }}>
                 <div className="flex items-center mb-4">
                   <div className="flex mr-2">
                     {[...Array(5)].map((_, i) => (
@@ -158,9 +157,9 @@ const Index = () => {
                 <p className="text-sm text-gray-500">July 22, 2023</p>
               </div>
               
-              <div className="text-center mt-6">
+              <div className="review-animation fade-up-animation text-center mt-6" style={{ transitionDelay: "0.5s" }}>
                 <Button 
-                  className="bg-barber-button hover:bg-barber-button/90 text-white"
+                  className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white border border-barber-primary"
                   onClick={() => window.location.href = "/reviews"}
                 >
                   View All Reviews
@@ -169,7 +168,7 @@ const Index = () => {
             </div>
             
             {/* Image Column */}
-            <div className="review-card opacity-0 -translate-x-8 transition-all duration-700">
+            <div className="review-animation slide-right-animation">
               <div className="relative overflow-hidden rounded-lg shadow-xl h-[500px]">
                 <img 
                   src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
@@ -192,9 +191,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
-      {/* Parallax divider between Reviews and Book CTA */}
-      <ParallaxDivider />
       
       {/* Book Now CTA */}
       <section className="py-16 bg-white">

@@ -110,7 +110,7 @@ const Services = () => {
         <div className="text-center mt-12">
           <Button 
             onClick={() => window.location.href = "/services"}
-            className="bg-barber-button hover:bg-barber-button/90 text-white"
+                  className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white border border-barber-primary"
           >
             View All Services
           </Button>
