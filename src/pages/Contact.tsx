@@ -87,13 +87,6 @@ const Contact = () => {
             </div>
             
             <div className="bg-barber-light p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-barber-primary mb-2">Do you offer gift certificates?</h3>
-              <p className="text-gray-600">
-                Yes, gift certificates are available for purchase in-store and make perfect gifts for any occasion.
-              </p>
-            </div>
-            
-            <div className="bg-barber-light p-6 rounded-lg">
               <h3 className="text-xl font-bold text-barber-primary mb-2">What payment methods do you accept?</h3>
               <p className="text-gray-600">
                 We accept cash, all major credit/debit cards, and mobile payment apps such as Apple Pay, Google Pay, and Venmo.
