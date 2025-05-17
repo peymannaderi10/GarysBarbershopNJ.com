@@ -135,37 +135,15 @@ const Reviews = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              className="bg-[#4285F4] hover:bg-[#4285F4]/90 text-white"
+              className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white border border-barber-primary"
               onClick={() => window.open("https://g.page/r/GarsBarberShop/review", "_blank")}
             >
               Leave a Google Review
             </Button>
-            <Button 
-              className="bg-barber-button hover:bg-barber-button/90 text-white"
-              onClick={() => window.open("https://www.facebook.com/GarsBarberShop/reviews/", "_blank")}
-            >
-              Leave a Facebook Review
-            </Button>
           </div>
         </div>
       </section>
-      
-      {/* Book Now CTA */}
-      <section className="py-16 bg-barber-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Experience Our Service?</h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Book your appointment today and see why our clients consistently rate us {rating}/5 stars.
-          </p>
-          <Button 
-            size="lg"
-            className="bg-barber-button hover:bg-barber-button/90 text-white px-8"
-            onClick={() => window.open("https://squareup.com/appointments", "_blank")}
-          >
-            Book an Appointment
-          </Button>
-        </div>
-      </section>
+    
     </div>
   );
 };

@@ -27,8 +27,8 @@ const ContactInfo = () => {
       <div className="space-y-6">
         {/* Phone */}
         <div className="flex items-start space-x-3">
-          <div className="bg-barber-button/10 p-3 rounded-full">
-            <Phone className="h-6 w-6 text-barber-accent" />
+          <div className="bg-barber-primary p-3 rounded-full">
+            <Phone className="h-6 w-6 text-white" />
           </div>
           <div>
             <h4 className="font-medium text-gray-800">Phone</h4>
@@ -38,8 +38,8 @@ const ContactInfo = () => {
         
         {/* Email */}
         <div className="flex items-start space-x-3">
-          <div className="bg-barber-button/10 p-3 rounded-full">
-            <Mail className="h-6 w-6 text-barber-accent" />
+          <div className="bg-barber-primary p-3 rounded-full">
+            <Mail className="h-6 w-6 text-white" />
           </div>
           <div>
             <h4 className="font-medium text-gray-800">Email</h4>
@@ -55,7 +55,7 @@ const ContactInfo = () => {
             href="https://maps.google.com/?q=12+E+Main+St,+Maple+Shade,+NJ+08052" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-barber-accent hover:underline inline-block mt-2"
+            className="text-barber-primary underline hover:underline inline-block mt-2"
           >
             Get Directions
           </a>
@@ -65,8 +65,8 @@ const ContactInfo = () => {
       {/* Hours */}
       <div className="mt-8">
         <div className="flex items-start space-x-3 mb-4">
-          <div className="bg-barber-button/10 p-3 rounded-full">
-            <Calendar className="h-6 w-6 text-barber-accent" />
+          <div className="bg-barber-primary p-3 rounded-full">
+            <Calendar className="h-6 w-6 text-white" />
           </div>
           <h4 className="font-medium text-gray-800 mt-3">Business Hours</h4>
         </div>
@@ -86,7 +86,7 @@ const ContactInfo = () => {
       
       {/* Book Button */}
       <Button 
-        className="w-full mt-8 bg-barber-button hover:bg-barber-button/90"
+        className="w-full mt-8 bg-barber-primary hover:bg-white hover:text-barber-primary text-white border border-barber-primary"
         onClick={() => window.open("https://squareup.com/appointments", "_blank")}
       >
         Book an Appointment

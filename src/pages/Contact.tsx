@@ -102,33 +102,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      
-      {/* CTA Section */}
-      <section className="py-16 bg-barber-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Book Your Appointment?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Experience the best haircut in Maple Shade. Book online now or contact us with any questions.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button 
-              size="lg"
-              className="bg-barber-button hover:bg-barber-button/90 text-white"
-              onClick={() => window.open("https://squareup.com/appointments", "_blank")}
-            >
-              Book an Appointment
-            </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10"
-              onClick={() => window.location.href = "tel:(856) 414-1015"}
-            >
-              Call Us
-            </Button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
