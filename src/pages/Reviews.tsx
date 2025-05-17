@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet";
 import ParallaxSection from "@/components/ParallaxSection";
 import { Button } from "@/components/ui/button";
 
@@ -91,60 +92,104 @@ const Reviews = () => {
   }, []);
   
   return (
-    <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <ParallaxSection
-        bgImage="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-        height="400px"
-      >
-        <div className="flex items-center justify-center h-full">
-          <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up text-white">Customer Reviews</h1>
-            <p className="text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              See what our clients have to say about their experience at Gary's Barbershop
-            </p>
-            <div className="mt-6 flex justify-center items-center space-x-2 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <div className="flex">
-                {"★★★★★".split("").map((star, i) => (
-                  <span key={i} className="text-yellow-400 text-2xl">
-                    {star}
-                  </span>
-                ))}
+    <>
+      <Helmet>
+        <title>Customer Reviews - Gary's Barbershop | Maple Shade, NJ</title>
+        <meta name="description" content="Read what our clients have to say about Gary's Barbershop in Maple Shade, NJ. With a 4.8+ rating, customers love our quality haircuts and service." />
+        <meta name="keywords" content="barbershop reviews, Gary's Barbershop reviews, Maple Shade barbershop, haircut reviews" />
+        <meta property="og:title" content="Customer Reviews - Gary's Barbershop" />
+        <meta property="og:description" content="See what our clients have to say about their experience at Gary's Barbershop in Maple Shade, NJ." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      
+      <main className="min-h-screen pt-16">
+        {/* Hero Section */}
+        <ParallaxSection
+          bgImage="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          height="300px"
+          ariaLabel="Customer Reviews Hero"
+        >
+          <div className="flex items-center justify-center h-full">
+            <div className="container mx-auto px-4 text-center text-white">
+              <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4 animate-fade-in-up text-white">Customer Reviews</h1>
+              <p className="text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                See what our clients have to say about their experience at Gary's Barbershop
+              </p>
+              <div className="mt-4 md:mt-6 flex justify-center items-center space-x-2 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+                <div className="flex">
+                  {"★★★★★".split("").map((star, i) => (
+                    <span key={i} className="text-yellow-400 text-xl md:text-2xl">
+                      {star}
+                    </span>
+                  ))}
+                </div>
+                <span className="text-lg md:text-xl font-semibold">{rating}/5 on Google Reviews</span>
               </div>
-              <span className="text-xl font-semibold">{rating}/5 on Google Reviews</span>
             </div>
           </div>
-        </div>
-      </ParallaxSection>
+        </ParallaxSection>
 
-      {/* SociableKit Google Reviews Widget */}
-      <section className="py-16 bg-barber-light">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <GoogleReviews />
+        {/* SociableKit Google Reviews Widget */}
+        <section className="py-10 md:py-16 bg-barber-light" aria-labelledby="reviews-heading">
+          <div className="sr-only" id="reviews-heading">Google Reviews</div>
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <GoogleReviews />
+            </div>
           </div>
-        </div>
-      </section>
-      
-      {/* Write A Review Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-barber-primary mb-4">Love Your Experience?</h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            We appreciate your feedback! If you enjoyed your visit to Gary's Barbershop, please consider leaving us a review.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white border border-barber-primary"
-              onClick={() => window.open("https://g.page/r/GarsBarberShop/review", "_blank")}
-            >
-              Leave a Google Review
-            </Button>
+        </section>
+        
+        {/* Write A Review Section */}
+        <section className="py-10 md:py-16 bg-white" aria-labelledby="write-review-heading">
+          <div className="container mx-auto px-4 text-center">
+            <h2 id="write-review-heading" className="text-2xl md:text-3xl font-bold text-barber-primary mb-3 md:mb-4">Love Your Experience?</h2>
+            <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 max-w-2xl mx-auto">
+              We appreciate your feedback! If you enjoyed your visit to Gary's Barbershop, please consider leaving us a review.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white border border-barber-primary"
+                onClick={() => window.open("https://g.page/r/GarsBarberShop/review", "_blank")}
+              >
+                Leave a Google Review
+              </Button>
+            </div>
           </div>
-        </div>
-      </section>
-    
-    </div>
+        </section>
+      </main>
+
+      {/* Structured Data for SEO */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Gary's Barbershop",
+        "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1",
+        "url": "https://garsbarbershop.com",
+        "telephone": "+18564141015",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 E Main St",
+          "addressLocality": "Maple Shade",
+          "addressRegion": "NJ",
+          "postalCode": "08052",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.95,
+          "longitude": -74.99
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": rating,
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "100+"
+        }
+      })}} />
+    </>
   );
 };
 

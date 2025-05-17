@@ -1,4 +1,3 @@
-
 import { useRef, useEffect, useState, ReactNode } from "react";
 
 interface ParallaxSectionProps {
@@ -10,6 +9,7 @@ interface ParallaxSectionProps {
   overlay?: boolean;
   overlayColor?: string;
   overlayOpacity?: number;
+  ariaLabel?: string;
 }
 
 const ParallaxSection = ({
@@ -21,21 +21,53 @@ const ParallaxSection = ({
   overlay = true,
   overlayColor = "#000000",
   overlayOpacity = 0.5,
+  ariaLabel,
 }: ParallaxSectionProps) => {
   const [scrollY, setScrollY] = useState(0);
   const parallaxRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  // Check for mobile and reduced motion preference
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    const checkReducedMotion = () => {
+      setPrefersReducedMotion(
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      );
+    };
+    
+    checkMobile();
+    checkReducedMotion();
+    
+    const mediaQueryList = window.matchMedia('(prefers-reduced-motion: reduce)');
+    mediaQueryList.addEventListener('change', checkReducedMotion);
+    window.addEventListener("resize", checkMobile);
+    
+    return () => {
+      mediaQueryList.removeEventListener('change', checkReducedMotion);
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
 
   useEffect(() => {
+    // Only apply parallax effect on desktop and when reduced motion is not preferred
+    if (isMobile || prefersReducedMotion) return;
+    
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isMobile, prefersReducedMotion]);
 
   useEffect(() => {
-    if (parallaxRef.current) {
+    // Only apply parallax effect on desktop and when reduced motion is not preferred
+    if (parallaxRef.current && !isMobile && !prefersReducedMotion) {
       const elementTop = parallaxRef.current.getBoundingClientRect().top + window.scrollY;
       const elementCenter = elementTop + parallaxRef.current.offsetHeight / 2;
       const windowCenter = window.scrollY + window.innerHeight / 2;
@@ -44,35 +76,35 @@ const ParallaxSection = ({
       
       parallaxRef.current.style.backgroundPositionY = `calc(${bgPosition} + ${parallaxFactor}px)`;
     }
-  }, [scrollY, bgPosition]);
+  }, [scrollY, bgPosition, isMobile, prefersReducedMotion]);
 
   return (
-    <div 
+    <section 
       ref={parallaxRef}
       className="relative"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundPosition: bgPosition,
         backgroundSize: bgSize,
-        backgroundAttachment: "fixed",
+        // Don't use fixed attachment on mobile for better performance
+        backgroundAttachment: isMobile || prefersReducedMotion ? "scroll" : "fixed",
         height,
       }}
+      role="region"
+      aria-label={ariaLabel}
     >
       {overlay && (
         <div 
+          className="absolute inset-0"
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
             backgroundColor: overlayColor,
             opacity: overlayOpacity,
           }}
+          aria-hidden="true"
         />
       )}
       <div className="relative z-10 h-full">{children}</div>
-    </div>
+    </section>
   );
 };
 

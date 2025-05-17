@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet";
 import ParallaxSection from "@/components/ParallaxSection";
 import { Button } from "@/components/ui/button";
 
@@ -94,151 +95,196 @@ const About = () => {
   }, []);
   
   return (
-    <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <ParallaxSection
-        bgImage="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-        height="400px"
-      >
-        <div className="flex items-center justify-center h-full">
-          <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up text-white">About Us</h1>
-            <p className="text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              A tradition of excellence in men's grooming since 2010
-            </p>
-          </div>
-        </div>
-      </ParallaxSection>
+    <>
+      <Helmet>
+        <title>About Gary's Barbershop | Maple Shade, NJ</title>
+        <meta name="description" content="Learn the story of Gary's Barbershop in Maple Shade, NJ. From our founding in 2010 to today, discover our dedication to quality haircuts and exceptional service." />
+        <meta name="keywords" content="Gary's Barbershop, barbershop history, Maple Shade barber, men's grooming, barber story" />
+        <meta property="og:title" content="About Gary's Barbershop" />
+        <meta property="og:description" content="Learn the story of Gary's Barbershop in Maple Shade, NJ. From our founding in 2010 to today, discover our dedication to quality haircuts and exceptional service." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1621605815971-fbc98d665033" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       
-      {/* Our Story Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Our Story</h2>
-            <p className="section-subheading">
-              From our humble beginnings to becoming Maple Shade's premier barbershop
-            </p>
+      <main className="min-h-screen pt-16">
+        {/* Hero Section */}
+        <ParallaxSection
+          bgImage="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          height="300px"
+          ariaLabel="About Us Hero Image"
+        >
+          <div className="flex items-center justify-center h-full">
+            <div className="container mx-auto px-4 text-center text-white">
+              <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4 animate-fade-in-up text-white">About Us</h1>
+              <p className="text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                A tradition of excellence in men's grooming since 2010
+              </p>
+            </div>
           </div>
-          
-          <div className="max-w-4xl mx-auto">
-            {storyItems.map((item, index) => (
-              <div 
-                key={item.id}
-                ref={(el) => (itemRefs.current[index] = el)}
-                data-id={item.id}
-                className={`flex mb-12 transition-all duration-700 ${
-                  visibleItems[item.id] 
-                    ? "opacity-100 transform translate-x-0" 
-                    : "opacity-0 transform translate-x-24"
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <div className="mr-8">
-                  <div className="flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-full bg-barber-primary text-white flex items-center justify-center font-bold">
-                      {index + 1}
+        </ParallaxSection>
+        
+        {/* Our Story Section */}
+        <section className="py-10 md:py-16 bg-white" aria-labelledby="our-story-heading">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 id="our-story-heading" className="section-heading">Our Story</h2>
+              <p className="section-subheading">
+                From our humble beginnings to becoming Maple Shade's premier barbershop
+              </p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              {storyItems.map((item, index) => (
+                <div 
+                  key={item.id}
+                  ref={(el) => (itemRefs.current[index] = el)}
+                  data-id={item.id}
+                  className={`flex mb-8 md:mb-12 transition-all duration-700 ${
+                    visibleItems[item.id] 
+                      ? "opacity-100 transform translate-x-0" 
+                      : "opacity-0 transform translate-x-24"
+                  }`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <div className="mr-4 md:mr-8">
+                    <div className="flex flex-col items-center">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-barber-primary text-white flex items-center justify-center font-bold text-sm md:text-base">
+                        {index + 1}
+                      </div>
+                      {index < storyItems.length - 1 && (
+                        <div className="w-1 bg-barber-button/20 flex-grow mt-2"></div>
+                      )}
                     </div>
-                    {index < storyItems.length - 1 && (
-                      <div className="w-1 bg-barber-button/20 flex-grow mt-2"></div>
-                    )}
+                  </div>
+                  <div className="flex-1">
+                    <div className="mb-1 text-barber-accent font-semibold text-sm md:text-base">
+                      {item.year}
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-barber-primary mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm md:text-base">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
-                <div className="flex-1">
-                  <div className="mb-1 text-barber-accent font-semibold">
-                    {item.year}
-                  </div>
-                  <h3 className="text-2xl font-bold text-barber-primary mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {item.description}
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* Meet Gary Section */}
+        <section className="py-10 md:py-16 bg-barber-light" aria-labelledby="meet-gary-heading">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 id="meet-gary-heading" className="section-heading">Meet Gary</h2>
+              <p className="section-subheading">
+                The master barber behind every exceptional cut and style
+              </p>
+            </div>
+            
+            <div className="max-w-5xl mx-auto" ref={garyRef}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+                <div 
+                  className={`relative overflow-hidden rounded-lg mx-auto w-full max-w-sm md:max-w-md hover-scale transition-all duration-1000 ${
+                    garyVisible 
+                      ? "opacity-100 transform translate-x-0" 
+                      : "opacity-0 transform -translate-x-24"
+                  }`}
+                >
+                  <img 
+                    src="https://images.unsplash.com/photo-1620574504614-8826dcf4a469?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
+                    alt="Gary - Owner & Master Barber" 
+                    className="object-cover w-full h-full rounded-lg shadow-xl"
+                    width="600"
+                    height="600"
+                    loading="lazy"
+                  />
+                </div>
+                
+                <div 
+                  className={`bg-white p-6 md:p-8 rounded-lg transition-all duration-1000 ${
+                    garyVisible 
+                      ? "opacity-100 transform translate-x-0" 
+                      : "opacity-0 transform translate-x-24"
+                  }`}
+                  style={{ transitionDelay: "300ms" }}
+                >
+                  <p className="text-barber-accent font-medium mb-4">Owner & Master Barber</p>
+                  <p className="text-gray-600 mb-3 text-sm md:text-base">
+                    With over 20 years of experience, Gary brings unmatched skill and precision to every haircut. His journey in barbering began with a passion for helping people look and feel their best.
+                  </p>
+                  <p className="text-gray-600 mb-3 text-sm md:text-base">
+                    Specializing in classic cuts, modern styles, and hot towel shaves, Gary's attention to detail and personalized approach keeps clients coming back year after year.
+                  </p>
+                  <p className="text-gray-600 text-sm md:text-base">
+                    As a one-man operation, Gary takes pride in providing consistent, high-quality service where every client receives his full attention and expertise.
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Meet Gary Section */}
-      <section className="py-16 bg-barber-light">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Meet Gary</h2>
-            <p className="section-subheading">
-              The master barber behind every exceptional cut and style
-            </p>
-          </div>
-          
-          <div className="max-w-5xl mx-auto" ref={garyRef}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div 
-                className={`relative overflow-hidden rounded-lg mx-auto w-full max-w-md hover-scale transition-all duration-1000 ${
-                  garyVisible 
-                    ? "opacity-100 transform translate-x-0" 
-                    : "opacity-0 transform -translate-x-24"
-                }`}
-              >
-                <img 
-                  src="https://images.unsplash.com/photo-1620574504614-8826dcf4a469?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
-                  alt="Gary - Owner & Master Barber" 
-                  className="object-cover w-full h-full rounded-lg shadow-xl"
-                />
-              </div>
-              
-              <div 
-                className={`bg-white p-8 rounded-lg transition-all duration-1000 ${
-                  garyVisible 
-                    ? "opacity-100 transform translate-x-0" 
-                    : "opacity-0 transform translate-x-24"
-                }`}
-                style={{ transitionDelay: "300ms" }}
-              >
-                <p className="text-barber-accent font-medium mb-4">Owner & Master Barber</p>
-                <p className="text-gray-600 mb-3">
-                  With over 20 years of experience, Gary brings unmatched skill and precision to every haircut. His journey in barbering began with a passion for helping people look and feel their best.
-                </p>
-                <p className="text-gray-600 mb-3">
-                  Specializing in classic cuts, modern styles, and hot towel shaves, Gary's attention to detail and personalized approach keeps clients coming back year after year.
-                </p>
-                <p className="text-gray-600">
-                  As a one-man operation, Gary takes pride in providing consistent, high-quality service where every client receives his full attention and expertise.
-                </p>
-              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Our Philosophy Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-barber-primary mb-4">Our Philosophy</h2>
-                <p className="text-gray-600 mb-4">
-                  At Gary's Barbershop, we believe that a great haircut is more than just a service—it's an experience. We take pride in our craft and are dedicated to helping you look and feel your best.
-                </p>
-                <p className="text-gray-600 mb-4">
-                  Our approach combines traditional barbering techniques with modern styles to deliver results that are both classic and contemporary.
-                </p>
-                <p className="text-gray-600">
-                  We value the relationships we build with our clients, and many have been with us since we first opened our doors. We're not just a barbershop; we're a community fixture that's proud to serve Maple Shade.
-                </p>
-              </div>
-              <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1622286342548-796395d7ccad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
-                  alt="Barbershop interior" 
-                  className="rounded-lg shadow-xl hover-scale"
-                />
+        {/* Our Philosophy Section */}
+        <section className="py-10 md:py-16 bg-white" aria-labelledby="philosophy-heading">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
+                <div>
+                  <h2 id="philosophy-heading" className="text-2xl md:text-3xl font-bold text-barber-primary mb-4">Our Philosophy</h2>
+                  <p className="text-gray-600 mb-4 text-sm md:text-base">
+                    At Gary's Barbershop, we believe that a great haircut is more than just a service—it's an experience. We take pride in our craft and are dedicated to helping you look and feel your best.
+                  </p>
+                  <p className="text-gray-600 mb-4 text-sm md:text-base">
+                    Our approach combines traditional barbering techniques with modern styles to deliver results that are both classic and contemporary.
+                  </p>
+                  <p className="text-gray-600 text-sm md:text-base">
+                    We value the relationships we build with our clients, and many have been with us since we first opened our doors. We're not just a barbershop; we're a community fixture that's proud to serve Maple Shade.
+                  </p>
+                </div>
+                <div className="relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1622286342548-796395d7ccad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
+                    alt="Gary's Barbershop interior" 
+                    className="rounded-lg shadow-xl hover-scale"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </main>
+
+      {/* Structured Data for SEO */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BarberShop",
+        "name": "Gary's Barbershop",
+        "image": "https://images.unsplash.com/photo-1620574504614-8826dcf4a469",
+        "url": "https://garsbarbershop.com/about",
+        "telephone": "+18564141015",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 E Main St",
+          "addressLocality": "Maple Shade",
+          "addressRegion": "NJ",
+          "postalCode": "08052",
+          "addressCountry": "US"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Gary",
+          "jobTitle": "Master Barber"
+        },
+        "foundingDate": "2010",
+        "description": "Gary's Barbershop provides exceptional grooming services in a welcoming environment. From classic cuts to modern styles, we take pride in our craft."
+      })}} />
+    </>
   );
 };
 
