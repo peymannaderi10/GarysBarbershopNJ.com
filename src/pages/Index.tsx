@@ -91,7 +91,7 @@ const Index = () => {
             </div>
             
             {/* Feature 3 */}
-            <div className="feature-animation rotate-animation opacity-0 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl" style={{ animationDelay: '1s' }}>
+            <div className="feature-animation rotate-animation opacity-0 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl" style={{ animationDelay: '0.75s' }}>
               <div className="w-16 h-16 mx-auto mb-6 bg-barber-primary/10 rounded-full flex items-center justify-center">
                 <Clock className="h-8 w-8 text-barber-primary" />
               </div>

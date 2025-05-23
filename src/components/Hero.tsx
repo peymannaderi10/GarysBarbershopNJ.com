@@ -46,10 +46,10 @@ const Hero = () => {
           style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-            Classic Grooming for the Modern Man
+            Look Sharp. Feel Confident.
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto">
-            Premium haircuts and beard trims by appointment at Gary's Barbershop in Maple Shade, NJ
+            Expert cuts & styling in Maple Shade, NJ
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
@@ -57,7 +57,7 @@ const Hero = () => {
               className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white text-lg px-8 py-6"
               onClick={() => window.open("https://squareup.com/appointments", "_blank")}
             >
-              Book an Appointment
+              Book Now
             </Button>
             <Button 
               size="lg"
@@ -65,7 +65,7 @@ const Hero = () => {
               className="text-barber-primary border-barber-primary hover:bg-barber-primary hover:text-white text-lg px-8 py-6"
               onClick={() => window.location.href = "/services"}
             >
-              Explore Services
+              Services
             </Button>
           </div>
           <div className="mt-12 text-gray-300">
