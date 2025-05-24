@@ -9,7 +9,7 @@ const Contact = () => {
   }, []);
   
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-16 overflow-x-hidden">
       {/* Hero Section */}
       <ParallaxSection
         bgImage="https://images.unsplash.com/photo-1587909209111-5097ee578ec3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
@@ -26,7 +26,7 @@ const Contact = () => {
       </ParallaxSection>
       
       {/* Contact Section */}
-      <section className="py-16 bg-barber-light">
+      <section className="py-16 bg-barber-light overflow-x-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {/* Map */}

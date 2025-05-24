@@ -152,7 +152,7 @@ const Services = () => {
     : allServices.filter(service => service.category === activeCategory);
   
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-16 overflow-x-hidden">
       {/* Hero Section */}
       <ParallaxSection
         bgImage="/images/garyBanner4.jpg"
@@ -171,7 +171,7 @@ const Services = () => {
       </ParallaxSection>
       
       {/* Services Section */}
-      <section className="py-16 bg-barber-light">
+      <section className="py-16 bg-barber-light overflow-x-hidden">
         <div className="container mx-auto px-4">
           <div className="flex justify-center mb-8">
             <div className="inline-flex rounded-md shadow-sm" role="group">
@@ -295,7 +295,7 @@ const Services = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 bg-barber-light text-barber-primary">
+      <section className="py-16 bg-barber-light text-barber-primary overflow-x-hidden">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready for a Great Haircut?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">

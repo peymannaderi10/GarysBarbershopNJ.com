@@ -107,7 +107,7 @@ const About = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       
-      <main className="min-h-screen pt-16">
+      <main className="min-h-screen pt-16 overflow-x-hidden">
         {/* Hero Section */}
         <ParallaxSection
           bgImage="/images/garyBannerAbout.JPG"
