@@ -113,7 +113,7 @@ const Index = () => {
       <ShapeDivider />
       
       {/* What Our Clients Say Section */}
-      <section className="py-20 bg-barber-light" ref={reviewsRef}>
+      <section className="py-20 bg-barber-light overflow-x-hidden" ref={reviewsRef}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="section-heading">What Our Clients Say</h2>

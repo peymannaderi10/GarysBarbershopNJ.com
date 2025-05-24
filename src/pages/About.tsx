@@ -128,7 +128,7 @@ const About = () => {
         </ParallaxSection>
         
         {/* Our Story Section */}
-        <section className="py-10 md:py-16 bg-white" aria-labelledby="our-story-heading">
+        <section className="py-10 md:py-16 bg-white overflow-x-hidden" aria-labelledby="our-story-heading">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8 md:mb-12">
               <h2 id="our-story-heading" className="section-heading">Our Story</h2>
@@ -178,7 +178,7 @@ const About = () => {
         </section>
         
         {/* Meet Gary Section */}
-        <section className="py-10 md:py-16 bg-barber-light" aria-labelledby="meet-gary-heading">
+        <section className="py-10 md:py-16 bg-barber-light overflow-x-hidden" aria-labelledby="meet-gary-heading">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8 md:mb-12">
               <h2 id="meet-gary-heading" className="section-heading">Meet Gary</h2>
