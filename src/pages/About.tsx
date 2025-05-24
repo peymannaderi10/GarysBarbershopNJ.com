@@ -110,14 +110,16 @@ const About = () => {
       <main className="min-h-screen pt-16">
         {/* Hero Section */}
         <ParallaxSection
-          bgImage="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-          height="300px"
+          bgImage="/images/garyBannerAbout.JPG"
+          height="400px"
+          bgPosition="center 60%"
+          enableMobileParallax={true}
           ariaLabel="About Us Hero Image"
         >
           <div className="flex items-center justify-center h-full">
             <div className="container mx-auto px-4 text-center text-white">
-              <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4 animate-fade-in-up text-white">About Us</h1>
-              <p className="text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <h1 className="text-4xl md:text-8xl font-bold mb-4 animate-fade-in-up text-white">About Us</h1>
+              <p className="text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 A tradition of excellence in men's grooming since 2010
               </p>
             </div>
@@ -187,14 +189,14 @@ const About = () => {
             <div className="max-w-5xl mx-auto" ref={garyRef}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
                 <div 
-                  className={`relative overflow-hidden rounded-lg mx-auto w-full max-w-sm md:max-w-md hover-scale transition-all duration-1000 ${
+                  className={`relative overflow-hidden rounded-lg mx-auto w-full max-w-sm md:max-w-md h-80 md:h-96 hover-scale transition-all duration-1000 ${
                     garyVisible 
                       ? "opacity-100 transform translate-x-0" 
                       : "opacity-0 transform -translate-x-24"
                   }`}
                 >
                   <img 
-                    src="https://images.unsplash.com/photo-1620574504614-8826dcf4a469?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
+                    src="/images/meetGary.JPG" 
                     alt="Gary - Owner & Master Barber" 
                     className="object-cover w-full h-full rounded-lg shadow-xl"
                     width="600"
@@ -235,7 +237,7 @@ const About = () => {
                 <div>
                   <h2 id="philosophy-heading" className="text-2xl md:text-3xl font-bold text-barber-primary mb-4">Our Philosophy</h2>
                   <p className="text-gray-600 mb-4 text-sm md:text-base">
-                    At Gary's Barbershop, we believe that a great haircut is more than just a service—it's an experience. We take pride in our craft and are dedicated to helping you look and feel your best.
+                    At Gary's Barbershop, we believe that a great haircut is more than just a service, it's an experience. We take pride in our craft and are dedicated to helping you look and feel your best.
                   </p>
                   <p className="text-gray-600 mb-4 text-sm md:text-base">
                     Our approach combines traditional barbering techniques with modern styles to deliver results that are both classic and contemporary.
@@ -244,11 +246,11 @@ const About = () => {
                     We value the relationships we build with our clients, and many have been with us since we first opened our doors. We're not just a barbershop; we're a community fixture that's proud to serve Maple Shade.
                   </p>
                 </div>
-                <div className="relative">
+                <div className="relative h-80 md:h-96 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1622286342548-796395d7ccad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
+                    src="/images/philosphy.JPG" 
                     alt="Gary's Barbershop interior" 
-                    className="rounded-lg shadow-xl hover-scale"
+                    className="object-cover w-full h-full rounded-lg shadow-xl hover-scale"
                     width="800"
                     height="600"
                     loading="lazy"
@@ -265,7 +267,7 @@ const About = () => {
         "@context": "https://schema.org",
         "@type": "BarberShop",
         "name": "Gary's Barbershop",
-        "image": "https://images.unsplash.com/photo-1620574504614-8826dcf4a469",
+        "image": "/images/meetGary.JPG",
         "url": "https://garsbarbershop.com/about",
         "telephone": "+18564141015",
         "address": {

@@ -75,7 +75,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold text-barber-primary text-center mb-4">Expert Craftsmanship</h3>
               <p className="text-gray-600 text-center">
-                Our barbers have years of professional experience and ongoing training to deliver precision cuts and styles.
+                Our barbers have years of professional experience and are fully certified to deliver precision cuts and styles.
               </p>
             </div>
             
@@ -135,10 +135,10 @@ const Index = () => {
                   </div>
                 </div>
                 <blockquote className="text-gray-600 italic mb-4">
-                  "Gary's is the only place I trust for my haircuts. Professional service and consistently great results every time. I've been coming here for years and have never had a bad experience."
+                  "High quality! Mr. Gary takes his time and makes sure that your cut is exactly what you asked for. Definitely make an appointment. It takes no time to book, and guarantees your spot. But I will say that this was my first experience with Mr. Gary and I haven't had a high quality haircut like this in a long time. Definitely earned a customer for life. Go see him, you won't be disappointed!"
                 </blockquote>
-                <p className="font-semibold text-barber-primary">— Michael Johnson</p>
-                <p className="text-sm text-gray-500">June 15, 2023</p>
+                <p className="font-semibold text-barber-primary">— Stanley Leak (Local Guide)</p>
+                <p className="text-sm text-gray-500">July 15, 2024</p>
               </div>
               
               {/* Review Card 2 */}
@@ -151,10 +151,10 @@ const Index = () => {
                   </div>
                 </div>
                 <blockquote className="text-gray-600 italic mb-4">
-                  "Best barbershop in Maple Shade! The environment is clean and welcoming, and the haircuts are consistently excellent. I won't go anywhere else for my grooming needs."
+                  "Gary has been my barber since I was 3yrs old, my father's and brothers barber as well... I am now 33 and he now cuts my kids hair... best around, always a good environment for kids and adults."
                 </blockquote>
-                <p className="font-semibold text-barber-primary">— David Williams</p>
-                <p className="text-sm text-gray-500">July 22, 2023</p>
+                <p className="font-semibold text-barber-primary">— Brian Walker</p>
+                <p className="text-sm text-gray-500">November 23, 2024</p>
               </div>
               
               <div className="review-animation fade-up-animation text-center mt-6" style={{ transitionDelay: "0.5s" }}>
@@ -169,9 +169,9 @@ const Index = () => {
             
             {/* Image Column */}
             <div className="review-animation slide-right-animation">
-              <div className="relative overflow-hidden rounded-lg shadow-xl h-[500px]">
+              <div className="relative overflow-hidden rounded-lg shadow-xl h-full h-[575px]">
                 <img 
-                  src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                    src="/images/homepageRating.JPG" 
                   alt="Satisfied client at Gary's Barbershop" 
                   className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
                 />

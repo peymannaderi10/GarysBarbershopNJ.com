@@ -94,7 +94,7 @@ const allServices: ServiceItem[] = [
     description: "Clean head shave with straight razor and hot towel treatment.",
     price: "$40",
     duration: "30 min",
-    category: "specialty"
+    category: "haircuts"
   },
   {
     id: 11,
@@ -155,15 +155,15 @@ const Services = () => {
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <ParallaxSection
-        bgImage="https://images.unsplash.com/photo-1599351431613-659d4877403d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        bgImage="/images/garyBanner4.jpg"
         height="400px"
+        bgPosition="Top"
+        enableMobileParallax={true}
       >
         <div className="flex items-center justify-center h-full">
           <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up text-white">Our Services</h1>
-            <p className="text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Professional grooming services tailored to enhance your look and confidence
-            </p>
+            <h1 className="text-4xl md:text-8xl font-bold mb-4 animate-fade-in-up text-white">Our Services</h1>
+            <p className="text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>Services tailored for your confidence</p>
           </div>
         </div>
       </ParallaxSection>
@@ -204,7 +204,7 @@ const Services = () => {
                 }`}
                 onClick={() => setActiveCategory("beards")}
               >
-                Beard Services
+                Facial Grooming
               </button>
               <button
                 type="button"
@@ -268,7 +268,6 @@ const Services = () => {
                   <li>Please arrive 5 minutes before your appointment time</li>
                   <li>24-hour cancellation notice required</li>
                   <li>Late arrivals may result in shortened service time</li>
-                  <li>Prices subject to change based on hair length/complexity</li>
                 </ul>
               </div>
               
@@ -277,7 +276,6 @@ const Services = () => {
                 <ul className="list-disc list-inside space-y-1 text-gray-700">
                   <li>Cash</li>
                   <li>Credit/Debit Cards</li>
-                  <li>Mobile Payment Apps</li>
                 </ul>
               </div>
             </div>

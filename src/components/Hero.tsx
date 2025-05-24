@@ -29,11 +29,11 @@ const Hero = () => {
           ref={parallaxRef}
           className="absolute inset-0 bg-barber-dark"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
+            backgroundImage: "url('/images/hero.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter: 'brightness(0.6)',
-            height: '120%', // Add extra height for parallax effect
+            filter: 'brightness(0.4)',
+            height: '130%', // Add extra height for parallax effect
             transform: 'translate3d(0, 0, 0)',
           }}
         />
