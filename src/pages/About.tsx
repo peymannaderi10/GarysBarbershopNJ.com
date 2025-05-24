@@ -112,6 +112,7 @@ const About = () => {
         <ParallaxSection
           bgImage="/images/garyBannerAbout.JPG"
           height="400px"
+          mobileHeight="300px"
           ariaLabel="About Us Hero Image"
           parallaxIntensity={0.6}
           overlayOpacity={0.55}

@@ -157,6 +157,7 @@ const Services = () => {
       <ParallaxSection
         bgImage="/images/garyBanner4.jpg"
         height="400px"
+        mobileHeight="300px"
         bgPosition="top"
         parallaxIntensity={0.6}
         overlayOpacity={0.55}

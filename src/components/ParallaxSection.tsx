@@ -6,6 +6,7 @@ interface ParallaxSectionProps {
   bgPosition?: string;
   bgSize?: string;
   height?: string;
+  mobileHeight?: string;
   overlay?: boolean;
   overlayColor?: string;
   overlayOpacity?: number;
@@ -19,6 +20,7 @@ const ParallaxSection = ({
   bgPosition = "center",
   bgSize = "cover",
   height = "500px",
+  mobileHeight,
   overlay = true,
   overlayColor = "#000000",
   overlayOpacity = 0.5,
@@ -80,6 +82,8 @@ const ParallaxSection = ({
     }
   }, [scrollY, bgPosition, isMobile, prefersReducedMotion, parallaxIntensity]);
 
+  const currentHeight = isMobile && mobileHeight ? mobileHeight : height;
+
   return (
     <section 
       ref={parallaxRef}
@@ -90,7 +94,7 @@ const ParallaxSection = ({
         backgroundSize: bgSize,
         // Don't use fixed attachment on mobile for better performance
         backgroundAttachment: isMobile || prefersReducedMotion ? "scroll" : "fixed",
-        height,
+        height: currentHeight,
       }}
       role="region"
       aria-label={ariaLabel}

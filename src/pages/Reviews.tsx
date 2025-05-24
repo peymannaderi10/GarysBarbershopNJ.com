@@ -109,6 +109,7 @@ const Reviews = () => {
         <ParallaxSection
           bgImage="/images/bannerReview.jpg"
           height="400px"
+          mobileHeight="300px"
           ariaLabel="Customer Reviews Hero"
           parallaxIntensity={0.6}
           overlayOpacity={0.55}
