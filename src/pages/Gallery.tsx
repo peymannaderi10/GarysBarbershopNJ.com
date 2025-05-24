@@ -86,8 +86,9 @@ const Gallery = () => {
       <main className="min-h-screen pt-16 overflow-x-hidden">
         {/* Hero Section */}
         <ParallaxSection
-          bgImage="/images/gallery1.JPG"
+          bgImage="/images/galleryBanner.jpg"
           height="400px"
+          bgPosition="bottom"
           mobileHeight="300px"
           ariaLabel="Gallery Hero Image"
           parallaxIntensity={0.6}
@@ -97,7 +98,7 @@ const Gallery = () => {
             <div className="container mx-auto px-4 text-center text-white">
               <h1 className="text-3xl md:text-8xl font-bold mb-3 md:mb-4 animate-fade-in-up text-white">Our Gallery</h1>
               <p className="text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                A glimpse into our professional barbershop experience
+                Take a look at our work!
               </p>
             </div>
           </div>

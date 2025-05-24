@@ -169,7 +169,7 @@ const Index = () => {
             
             {/* Image Column */}
             <div className="review-animation slide-right-animation">
-              <div className="relative overflow-hidden rounded-lg shadow-xl h-full h-[575px]">
+              <div className="relative overflow-hidden rounded-lg shadow-xl h-full h-[550px]">
                 <img 
                     src="/images/homepageRating.JPG" 
                   alt="Satisfied client at Gary's Barbershop" 
