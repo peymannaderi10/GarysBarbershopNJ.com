@@ -10,7 +10,7 @@ interface ParallaxSectionProps {
   overlayColor?: string;
   overlayOpacity?: number;
   ariaLabel?: string;
-  enableMobileParallax?: boolean;
+  parallaxIntensity?: number;
 }
 
 const ParallaxSection = ({
@@ -23,7 +23,7 @@ const ParallaxSection = ({
   overlayColor = "#000000",
   overlayOpacity = 0.5,
   ariaLabel,
-  enableMobileParallax = false,
+  parallaxIntensity = 0.4,
 }: ParallaxSectionProps) => {
   const [scrollY, setScrollY] = useState(0);
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -56,36 +56,29 @@ const ParallaxSection = ({
   }, []);
 
   useEffect(() => {
+    // Only apply parallax effect on desktop and when reduced motion is not preferred
+    if (isMobile || prefersReducedMotion) return;
+    
     const handleScroll = () => {
-      // Only update scrollY if parallax should be active
-      if (!((isMobile && !enableMobileParallax) || prefersReducedMotion)) {
-        setScrollY(window.scrollY);
-      }
+      setScrollY(window.scrollY);
     };
 
-    // Always set up the scroll listener immediately
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isMobile, prefersReducedMotion, enableMobileParallax]);
+  }, [isMobile, prefersReducedMotion]);
 
   useEffect(() => {
-    // Apply parallax effect when: not on mobile OR enableMobileParallax is true, AND reduced motion is not preferred
-    if (parallaxRef.current && !((isMobile && !enableMobileParallax) || prefersReducedMotion)) {
-      // Simplified parallax calculation that works from the start
-      const parallaxFactor = scrollY * 0.5; // Simpler calculation
+    // Only apply parallax effect on desktop and when reduced motion is not preferred
+    if (parallaxRef.current && !isMobile && !prefersReducedMotion) {
+      const elementTop = parallaxRef.current.getBoundingClientRect().top + window.scrollY;
+      const elementCenter = elementTop + parallaxRef.current.offsetHeight / 2;
+      const windowCenter = window.scrollY + window.innerHeight / 2;
+      const distance = windowCenter - elementCenter;
+      const parallaxFactor = distance * parallaxIntensity;
       
-      // Handle different bgPosition formats
-      if (bgPosition.includes('%')) {
-        // For percentage-based positions like "center 55%"
-        const [horizontal, vertical] = bgPosition.split(' ');
-        const verticalPercent = vertical || 'center';
-        parallaxRef.current.style.backgroundPosition = `${horizontal} calc(${verticalPercent} - ${parallaxFactor}px)`;
-      } else {
-        // For keyword positions like "top", "center", "bottom"
-        parallaxRef.current.style.backgroundPositionY = `calc(${bgPosition} - ${parallaxFactor}px)`;
-      }
+      parallaxRef.current.style.backgroundPositionY = `calc(${bgPosition} + ${parallaxFactor}px)`;
     }
-  }, [scrollY, bgPosition, isMobile, prefersReducedMotion, enableMobileParallax]);
+  }, [scrollY, bgPosition, isMobile, prefersReducedMotion, parallaxIntensity]);
 
   return (
     <section 
@@ -95,8 +88,8 @@ const ParallaxSection = ({
         backgroundImage: `url(${bgImage})`,
         backgroundPosition: bgPosition,
         backgroundSize: bgSize,
-        // Use fixed attachment when parallax is enabled, scroll otherwise
-        backgroundAttachment: ((isMobile && !enableMobileParallax) || prefersReducedMotion) ? "scroll" : "fixed",
+        // Don't use fixed attachment on mobile for better performance
+        backgroundAttachment: isMobile || prefersReducedMotion ? "scroll" : "fixed",
         height,
       }}
       role="region"

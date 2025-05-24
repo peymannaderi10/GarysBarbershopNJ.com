@@ -157,8 +157,9 @@ const Services = () => {
       <ParallaxSection
         bgImage="/images/garyBanner4.jpg"
         height="400px"
-        bgPosition="Top"
-        enableMobileParallax={true}
+        bgPosition="top"
+        parallaxIntensity={0.6}
+        overlayOpacity={0.55}
       >
         <div className="flex items-center justify-center h-full">
           <div className="container mx-auto px-4 text-center text-white">
@@ -268,6 +269,7 @@ const Services = () => {
                   <li>Please arrive 5 minutes before your appointment time</li>
                   <li>24-hour cancellation notice required</li>
                   <li>Late arrivals may result in shortened service time</li>
+                  <li>Prices subject to change based on hair length/complexity</li>
                 </ul>
               </div>
               
@@ -276,6 +278,7 @@ const Services = () => {
                 <ul className="list-disc list-inside space-y-1 text-gray-700">
                   <li>Cash</li>
                   <li>Credit/Debit Cards</li>
+                  <li>Mobile Payment Apps</li>
                 </ul>
               </div>
             </div>

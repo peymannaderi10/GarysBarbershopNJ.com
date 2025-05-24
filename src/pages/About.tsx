@@ -112,15 +112,15 @@ const About = () => {
         <ParallaxSection
           bgImage="/images/garyBannerAbout.JPG"
           height="400px"
-          bgPosition="center 60%"
-          enableMobileParallax={true}
           ariaLabel="About Us Hero Image"
+          parallaxIntensity={0.6}
+          overlayOpacity={0.55}
         >
           <div className="flex items-center justify-center h-full">
             <div className="container mx-auto px-4 text-center text-white">
-              <h1 className="text-4xl md:text-8xl font-bold mb-4 animate-fade-in-up text-white">About Us</h1>
-              <p className="text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                A tradition of excellence in men's grooming since 2010
+              <h1 className="text-3xl md:text-8xl font-bold mb-3 md:mb-4 animate-fade-in-up text-white">About Us</h1>
+              <p className="text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                Excellence in men's grooming since 2010
               </p>
             </div>
           </div>

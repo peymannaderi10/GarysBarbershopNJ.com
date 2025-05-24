@@ -107,15 +107,17 @@ const Reviews = () => {
       <main className="min-h-screen pt-16">
         {/* Hero Section */}
         <ParallaxSection
-          bgImage="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-          height="300px"
+          bgImage="/images/bannerReview.jpg"
+          height="400px"
           ariaLabel="Customer Reviews Hero"
+          parallaxIntensity={0.6}
+          overlayOpacity={0.55}
         >
           <div className="flex items-center justify-center h-full">
             <div className="container mx-auto px-4 text-center text-white">
-              <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4 animate-fade-in-up text-white">Customer Reviews</h1>
+              <h1 className="text-3xl md:text-8xl font-bold mb-3 md:mb-4 animate-fade-in-up text-white">Customer Reviews</h1>
               <p className="text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                See what our clients have to say about their experience at Gary's Barbershop
+                Let our clients tell you about their experience
               </p>
               <div className="mt-4 md:mt-6 flex justify-center items-center space-x-2 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 <div className="flex">
@@ -165,7 +167,7 @@ const Reviews = () => {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Gary's Barbershop",
-        "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1",
+        "image": "/images/bannerReview.jpg",
         "url": "https://garsbarbershop.com",
         "telephone": "+18564141015",
         "address": {
