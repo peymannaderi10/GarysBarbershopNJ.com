@@ -43,6 +43,10 @@
     @apply border-border;
   }
 
+  html {
+    @apply overflow-x-hidden;
+  }
+
   body {
     @apply bg-barber-light text-barber-dark font-sans overflow-x-hidden;
     scroll-behavior: smooth;
@@ -78,11 +82,6 @@
 
   .section-subheading {
     @apply text-lg text-barber-dark mb-8 max-w-2xl mx-auto;
-  }
-
-  /* Prevent horizontal overflow from animations */
-  .container {
-    @apply overflow-x-hidden;
   }
 }
 
@@ -211,20 +210,20 @@ html {
 /* Review card animations */
 .slide-left-animation {
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(60px);
   transition: all 1s cubic-bezier(0.17, 0.67, 0.3, 0.96);
 }
 
 .slide-right-animation {
   opacity: 0;
-  transform: translateX(-40px);
+  transform: translateX(-60px);
   transition: all 1s cubic-bezier(0.17, 0.67, 0.3, 0.96);
 }
 
 .fade-up-animation {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 1s cubic-bezier(0.17, 0.67, 0.3, 0.96);
+  transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
 }
 
 .animate-review {
