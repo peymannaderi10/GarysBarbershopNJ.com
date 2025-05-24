@@ -13,33 +13,33 @@ interface StoryItem {
 const storyItems: StoryItem[] = [
   {
     id: 1,
-    year: "2010",
-    title: "The Beginning",
-    description: "Gary's Barbershop was founded with a simple mission: to provide exceptional grooming services in a welcoming environment."
+    year: "1991",
+    title: "The Inspiration",
+    description: "In 10th grade, Gary watched a friend buy a pair of clippers and start making good money cutting hair. Inspired by this, Gary saved up money from his job at a thrift store to buy his own clippers and began his barbering journey."
   },
   {
     id: 2,
-    year: "2013",
-    title: "Growing Reputation",
-    description: "After three years of hard work and dedication, Gary's Barbershop became known as one of the premier barbershops in Maple Shade."
+    year: "1991",
+    title: "Formal Training",
+    description: "Gary enrolled at Gordon Phillips Hair School where he earned his barbering certification, laying the foundation for what would become a 34-year career in the craft."
   },
   {
     id: 3,
-    year: "2016",
-    title: "Expansion",
-    description: "Due to increasing demand, we expanded our space and services to accommodate our growing clientele."
+    year: "1992",
+    title: "Klippers is Born",
+    description: "Gary opened 'Klippers' at the Pennsauken Mart, an indoor flea market. The name came from his oldest client, Anthony Thompson, who has been with Gary since day one and continues to visit today."
   },
   {
     id: 4,
-    year: "2020",
-    title: "Adapting & Improving",
-    description: "During challenging times, we implemented innovative safety measures and an appointment system to ensure the best experience for our clients."
+    year: "2003",
+    title: "A New Chapter",
+    description: "When the Pennsauken Mart was torn down for apartments, Gary chose to stay in the area and opened Gary's Barbershop in Maple Shade, bringing his loyal clientele to a new home."
   },
   {
     id: 5,
     year: "Present",
-    title: "Continuing Excellence",
-    description: "Today, we continue our commitment to quality, community, and craftsmanship, maintaining our reputation as Maple Shade's premier barbershop."
+    title: "34 Years Strong",
+    description: "Today, Gary continues perfecting his craft in a freshly renovated shop with Ravens purple and gray theme, serving his community with the same dedication and skill that has kept clients like Anthony coming back for over three decades."
   }
 ];
 
@@ -98,10 +98,10 @@ const About = () => {
     <>
       <Helmet>
         <title>About Gary's Barbershop | Maple Shade, NJ</title>
-        <meta name="description" content="Learn the story of Gary's Barbershop in Maple Shade, NJ. From our founding in 2010 to today, discover our dedication to quality haircuts and exceptional service." />
-        <meta name="keywords" content="Gary's Barbershop, barbershop history, Maple Shade barber, men's grooming, barber story" />
+        <meta name="description" content="Meet Gary, master barber with 34 years experience. From Klippers at Pennsauken Mart in 1992 to Gary's Barbershop in Maple Shade since 2003. Specializing in bald fades and crisp lineups." />
+        <meta name="keywords" content="Gary's Barbershop, barbershop history, Maple Shade barber, men's grooming, barber story, bald fade specialist" />
         <meta property="og:title" content="About Gary's Barbershop" />
-        <meta property="og:description" content="Learn the story of Gary's Barbershop in Maple Shade, NJ. From our founding in 2010 to today, discover our dedication to quality haircuts and exceptional service." />
+        <meta property="og:description" content="Meet Gary, master barber with 34 years experience. From Klippers at Pennsauken Mart in 1992 to Gary's Barbershop in Maple Shade since 2003. Specializing in bald fades and crisp lineups." />
         <meta property="og:image" content="https://images.unsplash.com/photo-1621605815971-fbc98d665033" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -133,46 +133,71 @@ const About = () => {
             <div className="text-center mb-8 md:mb-12">
               <h2 id="our-story-heading" className="section-heading">Our Story</h2>
               <p className="section-subheading">
-                From our humble beginnings to becoming Maple Shade's premier barbershop
+                34 years of experience from Pennsauken Mart to Maple Shade
               </p>
             </div>
             
-            <div className="max-w-4xl mx-auto">
-              {storyItems.map((item, index) => (
-                <div 
-                  key={item.id}
-                  ref={(el) => (itemRefs.current[index] = el)}
-                  data-id={item.id}
-                  className={`flex mb-8 md:mb-12 transition-all duration-700 ${
-                    visibleItems[item.id] 
-                      ? "opacity-100 transform translate-x-0" 
-                      : "opacity-0 transform translate-x-24"
-                  }`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <div className="mr-4 md:mr-8">
-                    <div className="flex flex-col items-center">
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-barber-primary text-white flex items-center justify-center font-bold text-sm md:text-base">
-                        {index + 1}
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                {/* Timeline */}
+                <div className="max-w-4xl">
+                  {storyItems.map((item, index) => (
+                    <div 
+                      key={item.id}
+                      ref={(el) => (itemRefs.current[index] = el)}
+                      data-id={item.id}
+                      className={`flex mb-8 md:mb-12 transition-all duration-700 ${
+                        visibleItems[item.id] 
+                          ? "opacity-100 transform translate-x-0" 
+                          : "opacity-0 transform translate-x-24"
+                      }`}
+                      style={{ transitionDelay: `${index * 100}ms` }}
+                    >
+                      <div className="mr-4 md:mr-8">
+                        <div className="flex flex-col items-center">
+                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-barber-primary text-white flex items-center justify-center font-bold text-sm md:text-base">
+                            {index + 1}
+                          </div>
+                          {index < storyItems.length - 1 && (
+                            <div className="w-1 bg-barber-button/20 flex-grow mt-2"></div>
+                          )}
+                        </div>
                       </div>
-                      {index < storyItems.length - 1 && (
-                        <div className="w-1 bg-barber-button/20 flex-grow mt-2"></div>
-                      )}
+                      <div className="flex-1">
+                        <div className="mb-1 text-barber-accent font-semibold text-sm md:text-base">
+                          {item.year}
+                        </div>
+                        <h3 className="text-xl md:text-2xl font-bold text-barber-primary mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm md:text-base">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="mb-1 text-barber-accent font-semibold text-sm md:text-base">
-                      {item.year}
+                  ))}
+                </div>
+                
+                {/* Klippers Photo */}
+                <div className="lg:sticky lg:top-24">
+                  <div className="bg-barber-light/30 p-6 rounded-lg">
+                    <h3 className="text-xl font-bold text-barber-primary mb-3 text-center">The Original Klippers</h3>
+                    <div className="relative overflow-hidden rounded-lg shadow-xl hover-scale">
+                      <img 
+                        src="/images/Klippers.JPG" 
+                        alt="Gary holding his original Klippers barbershop sign from Pennsauken Mart" 
+                        className="w-full h-auto rounded-lg"
+                        width="600"
+                        height="800"
+                        loading="lazy"
+                      />
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-barber-primary mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm md:text-base">
-                      {item.description}
+                    <p className="mt-4 text-sm text-gray-600 text-center">
+                      Gary with his original "Klippers" sign from the Pennsauken Mart era (1992-2003). The name was suggested by his loyal client Anthony Thompson, who still visits today.
                     </p>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </section>
@@ -183,14 +208,14 @@ const About = () => {
             <div className="text-center mb-8 md:mb-12">
               <h2 id="meet-gary-heading" className="section-heading">Meet Gary</h2>
               <p className="section-subheading">
-                The master barber behind every exceptional cut and style
+                The master barber with 34 years of experience and a passion for perfect fades
               </p>
             </div>
             
             <div className="max-w-5xl mx-auto" ref={garyRef}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
                 <div 
-                  className={`relative overflow-hidden rounded-lg mx-auto w-full max-w-sm md:max-w-md h-80 md:h-96 hover-scale transition-all duration-1000 ${
+                  className={`relative overflow-hidden rounded-lg mx-auto w-full max-w-sm md:max-w-md h-96 md:h-[35rem] hover-scale transition-all duration-1000 ${
                     garyVisible 
                       ? "opacity-100 transform translate-x-0" 
                       : "opacity-0 transform -translate-x-24"
@@ -214,15 +239,18 @@ const About = () => {
                   }`}
                   style={{ transitionDelay: "300ms" }}
                 >
-                  <p className="text-barber-accent font-medium mb-4">Owner & Master Barber</p>
+                  <p className="text-barber-accent font-medium mb-4">Owner & Master Barber - 34 Years Experience</p>
                   <p className="text-gray-600 mb-3 text-sm md:text-base">
-                    With over 20 years of experience, Gary brings unmatched skill and precision to every haircut. His journey in barbering began with a passion for helping people look and feel their best.
+                    Gary's barbering journey began in 10th grade when he was inspired by a friend who made good money cutting hair. After saving up from his thrift store job for his first clippers, Gary knew he'd found his calling.
                   </p>
                   <p className="text-gray-600 mb-3 text-sm md:text-base">
-                    Specializing in classic cuts, modern styles, and hot towel shaves, Gary's attention to detail and personalized approach keeps clients coming back year after year.
+                    Trained at Gordon Phillips Hair School in 1991, Gary started "Klippers" at the Pennsauken Mart in 1992. When the mart was demolished in 2003, he brought his loyal clientele to Maple Shade, where he's been serving the community ever since.
+                  </p>
+                  <p className="text-gray-600 mb-3 text-sm md:text-base">
+                    Specializing in bald fades - his personal favorite - Gary takes pride in creating smooth, clean transitions and crisp lineups. His oldest client, Anthony Thompson, has been coming since 1992 and even suggested the original "Klippers" name.
                   </p>
                   <p className="text-gray-600 text-sm md:text-base">
-                    As a one-man operation, Gary takes pride in providing consistent, high-quality service where every client receives his full attention and expertise.
+                    Known for his sports knowledge, friendly personality, and spotless shop, Gary operates by appointment only to ensure each client gets his full, dedicated attention without any waiting.
                   </p>
                 </div>
               </div>
@@ -238,13 +266,16 @@ const About = () => {
                 <div>
                   <h2 id="philosophy-heading" className="text-2xl md:text-3xl font-bold text-barber-primary mb-4">Our Philosophy</h2>
                   <p className="text-gray-600 mb-4 text-sm md:text-base">
-                    At Gary's Barbershop, we believe that a great haircut is more than just a service, it's an experience. We take pride in our craft and are dedicated to helping you look and feel your best.
+                    At Gary's Barbershop, we believe a great haircut comes down to three things: a blurry fade, a crisp lineup, and having a laugh while you're in the chair.
                   </p>
                   <p className="text-gray-600 mb-4 text-sm md:text-base">
-                    Our approach combines traditional barbering techniques with modern styles to deliver results that are both classic and contemporary.
+                    Gary approaches each new client by carefully assessing their hair texture, previous style, head shape, and styling preferences. Whether you use product or prefer a natural look, he'll work with you to create the perfect cut for your lifestyle.
+                  </p>
+                  <p className="text-gray-600 mb-4 text-sm md:text-base">
+                    After 34 years in the business, Gary stays current with trends through hair shows, conventions, and staying connected with the barbering community. He cuts all hair types and handles everyone from kids to seniors with the same friendly, professional approach.
                   </p>
                   <p className="text-gray-600 text-sm md:text-base">
-                    We value the relationships we build with our clients, and many have been with us since we first opened our doors. We're not just a barbershop; we're a community fixture that's proud to serve Maple Shade.
+                    This recently renovated shop, featuring Ravens purple and gray colors, provides a trusted place where the Maple Shade community knows they'll always get exceptional haircuts in a pleasant, clean atmosphere - and right on time for their appointment.
                   </p>
                 </div>
                 <div className="relative h-80 md:h-96 overflow-hidden">
@@ -282,10 +313,11 @@ const About = () => {
         "founder": {
           "@type": "Person",
           "name": "Gary",
-          "jobTitle": "Master Barber"
+          "jobTitle": "Master Barber",
+          "description": "34 years experience, Gordon Phillips Hair School certified, specializing in bald fades"
         },
-        "foundingDate": "2010",
-        "description": "Gary's Barbershop provides exceptional grooming services in a welcoming environment. From classic cuts to modern styles, we take pride in our craft."
+        "foundingDate": "2003",
+        "description": "Gary's Barbershop in Maple Shade, NJ. Master barber Gary has 34 years experience, trained at Gordon Phillips Hair School. Specializes in bald fades and crisp lineups. Appointment-only for dedicated service."
       })}} />
     </>
   );
