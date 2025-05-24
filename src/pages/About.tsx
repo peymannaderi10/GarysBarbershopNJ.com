@@ -39,7 +39,7 @@ const storyItems: StoryItem[] = [
     id: 5,
     year: "Present",
     title: "34 Years Strong",
-    description: "Today, Gary continues perfecting his craft in a freshly renovated shop with Ravens purple and gray theme, serving his community with the same dedication and skill that has kept clients like Anthony coming back for over three decades."
+    description: "Today, Gary continues perfecting his craft in a freshly renovated shop with Baltimore Ravens purple and gray theme, serving his community with the same dedication and skill that has kept clients like Anthony coming back for over three decades."
   }
 ];
 
@@ -275,7 +275,7 @@ const About = () => {
                     After 34 years in the business, Gary stays current with trends through hair shows, conventions, and staying connected with the barbering community. He cuts all hair types and handles everyone from kids to seniors with the same friendly, professional approach.
                   </p>
                   <p className="text-gray-600 text-sm md:text-base">
-                    This recently renovated shop, featuring Ravens purple and gray colors, provides a trusted place where the Maple Shade community knows they'll always get exceptional haircuts in a pleasant, clean atmosphere - and right on time for their appointment.
+                    This recently renovated shop, featuring Baltimore Ravens purple and gray colors, provides a trusted place where the Maple Shade community knows they'll always get exceptional haircuts in a pleasant, clean atmosphere - and right on time for their appointment.
                   </p>
                 </div>
                 <div className="relative h-80 md:h-96 overflow-hidden">
