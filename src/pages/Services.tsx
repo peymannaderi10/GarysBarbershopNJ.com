@@ -247,7 +247,7 @@ const Services = () => {
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <Button 
                   className="w-full bg-barber-primary hover:bg-barber-primary/90"
-                  onClick={() => window.open("https://squareup.com/appointments", "_blank")}
+                  onClick={() => window.open("https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services", "_blank")}
                 >
                   Book Now
                 </Button>
@@ -302,7 +302,7 @@ const Services = () => {
           <Button 
             size="lg"
             className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white border border-barber-primary"
-            onClick={() => window.open("https://squareup.com/appointments", "_blank")}
+            onClick={() => window.open("https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services", "_blank")}
           >
             Book an Appointment
           </Button>

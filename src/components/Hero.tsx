@@ -55,7 +55,7 @@ const Hero = () => {
             <Button 
               size="lg"
               className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white text-lg px-8 py-6"
-              onClick={() => window.open("https://squareup.com/appointments", "_blank")}
+              onClick={() => window.open("https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services", "_blank")}
             >
               Book Now
             </Button>

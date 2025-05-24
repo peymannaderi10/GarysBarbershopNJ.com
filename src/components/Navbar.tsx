@@ -89,7 +89,7 @@ const Navbar = () => {
                   ? "bg-white/10 hover:bg-white/20 text-white border border-white/30"
                   : "bg-white/20 hover:bg-white/30 text-white border border-white/30"
             )}
-            onClick={() => window.open("https://squareup.com/appointments", "_blank")}
+            onClick={() => window.open("https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services", "_blank")}
           >
             Book Now
           </Button>
@@ -136,7 +136,7 @@ const Navbar = () => {
           ))}
           <Button 
             className="mt-4 bg-white/10 hover:bg-white/20 text-white border border-white/30"
-            onClick={() => window.open("https://squareup.com/appointments", "_blank")}
+            onClick={() => window.open("https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services", "_blank")}
           >
             Book Now
           </Button>

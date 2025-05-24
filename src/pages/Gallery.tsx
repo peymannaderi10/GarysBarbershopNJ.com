@@ -175,7 +175,7 @@ const Gallery = () => {
             </p>
             <button 
               className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white border border-barber-primary px-8 py-3 rounded-md font-medium transition-colors duration-300"
-              onClick={() => window.open("https://squareup.com/appointments", "_blank")}
+              onClick={() => window.open("https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services", "_blank")}
             >
               Book Your Appointment
             </button>

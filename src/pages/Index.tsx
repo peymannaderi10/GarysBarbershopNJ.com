@@ -203,7 +203,7 @@ const Index = () => {
             <Button 
               size="lg"
               className="bg-barber-primary hover:bg-barber-secondary text-white px-8 py-6 text-lg"
-              onClick={() => window.open("https://squareup.com/appointments", "_blank")}
+              onClick={() => window.open("https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services", "_blank")}
             >
               Book Now
             </Button>
