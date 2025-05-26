@@ -169,11 +169,12 @@ const Index = () => {
             
             {/* Image Column */}
             <div className="review-animation slide-right-animation">
-              <div className="relative overflow-hidden rounded-lg shadow-xl h-full h-[550px]">
+              <div className="relative overflow-hidden rounded-lg shadow-xl h-full max-h-[600px]">
                 <img 
                     src="/images/homepageRating.JPG" 
                   alt="Satisfied client at Gary's Barbershop" 
                   className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
+                  style={{ transform: "translateY(-20%)" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-barber-primary/70 to-transparent flex items-end">
                   <div className="p-6 text-white">

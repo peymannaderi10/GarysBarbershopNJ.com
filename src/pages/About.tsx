@@ -13,7 +13,7 @@ interface StoryItem {
 const storyItems: StoryItem[] = [
   {
     id: 1,
-    year: "1991",
+    year: "1988",
     title: "The Inspiration",
     description: "In 10th grade, Gary watched a friend buy a pair of clippers and start making good money cutting hair. Inspired by this, Gary saved up money from his job at a thrift store to buy his own clippers and began his barbering journey."
   },
