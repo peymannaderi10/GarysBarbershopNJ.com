@@ -89,7 +89,7 @@ const Contact = () => {
             <div className="bg-barber-light p-6 rounded-lg">
               <h3 className="text-xl font-bold text-barber-primary mb-2">What payment methods do you accept?</h3>
               <p className="text-gray-600">
-                We accept cash, all major credit/debit cards, and mobile payment apps such as Apple Pay, Google Pay, and Venmo.
+                We accept cash, all major credit/debit cards.
               </p>
             </div>
           </div>
