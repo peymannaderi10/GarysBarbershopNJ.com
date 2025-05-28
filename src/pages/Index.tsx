@@ -69,7 +69,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Feature 1 */}
-            <div className="feature-animation float-animation opacity-0 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl" style={{ animationDelay: '0.2s' }}>
+            <div className="feature-animation float-animation opacity-0 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl" style={{ animationDelay: '0.1s' }}>
               <div className="w-16 h-16 mx-auto mb-6 bg-barber-primary/10 rounded-full flex items-center justify-center">
                 <Scissors className="h-8 w-8 text-barber-primary" />
               </div>
@@ -80,7 +80,7 @@ const Index = () => {
             </div>
             
             {/* Feature 2 */}
-            <div className="feature-animation scale-animation opacity-0 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl" style={{ animationDelay: '0.6s' }}>
+            <div className="feature-animation scale-animation opacity-0 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl" style={{ animationDelay: '0.2s' }}>
               <div className="w-16 h-16 mx-auto mb-6 bg-barber-primary/10 rounded-full flex items-center justify-center">
                 <Award className="h-8 w-8 text-barber-primary" />
               </div>
@@ -91,7 +91,7 @@ const Index = () => {
             </div>
             
             {/* Feature 3 */}
-            <div className="feature-animation rotate-animation opacity-0 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl" style={{ animationDelay: '0.75s' }}>
+            <div className="feature-animation rotate-animation opacity-0 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl" style={{ animationDelay: '0.3s' }}>
               <div className="w-16 h-16 mx-auto mb-6 bg-barber-primary/10 rounded-full flex items-center justify-center">
                 <Clock className="h-8 w-8 text-barber-primary" />
               </div>

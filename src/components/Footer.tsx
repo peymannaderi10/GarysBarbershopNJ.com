@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { Phone, Mail, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -20,22 +20,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/gthebarber830" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-white hover:text-barber-accent transition-colors p-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent"
                 aria-label="Follow us on Instagram"
               >
                 <Instagram size={20} aria-hidden="true" />
-              </a>
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white hover:text-barber-accent transition-colors p-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent"
-                aria-label="Follow us on Facebook"
-              >
-                <Facebook size={20} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -138,10 +129,10 @@ const Footer = () => {
               <p className="flex items-start space-x-3 text-white">
                 <span className="mt-1"><Mail size={16} aria-hidden="true" /></span>
                 <a 
-                  href="mailto:info@garsbarbershop.com"
+                  href="mailto:garysbarbershop12@gmail.com"
                   className="hover:text-barber-accent transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent"
                 >
-                  info@garsbarbershop.com
+                  garysbarbershop12@gmail.com
                 </a>
               </p>
               <p className="text-white">
@@ -165,7 +156,7 @@ const Footer = () => {
         "logo": "https://garsbarbershop.com/logo.png",
         "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1",
         "telephone": "+18564141015",
-        "email": "info@garsbarbershop.com",
+        "email": "garysbarbershop12@gmail.com",
         "description": "Premier barbershop in Maple Shade offering high-quality haircuts by appointment.",
         "address": {
           "@type": "PostalAddress",

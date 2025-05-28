@@ -43,7 +43,7 @@ const ContactInfo = () => {
           </div>
           <div>
             <h4 className="font-medium text-gray-800">Email</h4>
-            <p className="text-gray-600">info@garsbarbershop.com</p>
+            <p className="text-gray-600">garysbarbershop12@gmail.com</p>
           </div>
         </div>
         
