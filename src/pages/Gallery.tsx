@@ -16,15 +16,60 @@ const galleryImages: GalleryImage[] = [
     alt: "Gary's Barbershop interior and styling",
     title: "Our Professional Space"
   },
-  // Placeholder images for future use
-  { id: 2, src: "", alt: "Professional haircut in progress" },
-  { id: 3, src: "", alt: "Classic barber tools and equipment" },
-  { id: 4, src: "", alt: "Client receiving premium service" },
-  { id: 5, src: "", alt: "Modern barbershop atmosphere" },
-  { id: 6, src: "", alt: "Precision beard trimming" },
-  { id: 7, src: "", alt: "Traditional hot towel service" },
-  { id: 8, src: "", alt: "Satisfied customer results" },
-  { id: 9, src: "", alt: "Professional barber at work" },
+  {
+    id: 2,
+    src: "/images/gallery2.jpg",
+    alt: "Professional haircut in progress",
+    title: "Expert Styling"
+  },
+  {
+    id: 3,
+    src: "/images/gallery3.jpg",
+    alt: "Classic barber tools and equipment",
+    title: "Professional Tools"
+  },
+  {
+    id: 4,
+    src: "/images/gallery4.jpg",
+    alt: "Client receiving premium service",
+    title: "Premium Service"
+  },
+  {
+    id: 5,
+    src: "/images/gallery5.jpeg",
+    alt: "Modern barbershop atmosphere",
+    title: "Modern Atmosphere"
+  },
+  {
+    id: 6,
+    src: "/images/gallery6.PNG",
+    alt: "Precision beard trimming",
+    title: "Precision Work"
+  },
+  {
+    id: 7,
+    src: "/images/gallery7.jpg",
+    alt: "Traditional hot towel service",
+    title: "Traditional Service"
+  },
+  {
+    id: 8,
+    src: "/images/gallery8.jpg",
+    alt: "Satisfied customer results",
+    title: "Quality Results"
+  },
+  {
+    id: 9,
+    src: "/images/gallery9.jpg",
+    alt: "Professional barber at work",
+    title: "Professional Work"
+  },
+  {
+    id: 10,
+    src: "/images/gallery10.jpg",
+    alt: "Gary's Barbershop showcase",
+    title: "Our Showcase"
+  },
 ];
 
 const Gallery = () => {
