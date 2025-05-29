@@ -17,7 +17,7 @@ const allServices: ServiceItem[] = [
   // Haircuts
   {
     id: 1,
-    name: "Regular Haircut",
+    name: "Men's Haircut",
     description: "Traditional haircut with clippers and scissors including a hot towel neck shave.",
     price: "$40",
     duration: "30 min",
@@ -25,47 +25,31 @@ const allServices: ServiceItem[] = [
   },
   {
     id: 2,
-    name: "Specialty Haircut",
-    description: "Premium haircut service for fades, flat tops, and mohawks with extra attention to detail.",
-    price: "$40",
-    duration: "45 min",
-    category: "haircuts"
-  },
-  {
-    id: 3,
-    name: "Boy's Haircut",
-    description: "Haircut service for children 10 years of age and under.",
-    price: "$35",
-    duration: "25 min",
-    category: "haircuts"
-  },
-  {
-    id: 4,
     name: "Senior Haircut",
-    description: "Haircut service for clients 62 years and older.",
+    description: "Traditional haircut with clippers and scissors for clients 62 years and older.",
     price: "$30",
     duration: "30 min",
     category: "haircuts"
   },
   {
-    id: 5,
-    name: "Line Up",
+    id: 3,
+    name: "Shape Up",
     description: "Quick shape up service to keep your hairline looking fresh and clean.",
-    price: "$20",
-    duration: "15 min",
+    price: "Price Varies",
+    duration: "30 min",
     category: "haircuts"
   },
   // Beard Services
   {
-    id: 6,
+    id: 4,
     name: "Beard Trim",
     description: "Shape and define your beard with precision trimming and styling.",
-    price: "$25",
-    duration: "20 min",
+    price: "Price Varies",
+    duration: "30 min",
     category: "beards"
   },
   {
-    id: 7,
+    id: 5,
     name: "Hot Towel Shave",
     description: "Traditional straight razor shave with hot towels and premium products.",
     price: "$25",
@@ -73,44 +57,36 @@ const allServices: ServiceItem[] = [
     category: "beards"
   },
   {
-    id: 8,
-    name: "Eyebrows",
-    description: "Trim and razor service to shape and clean up eyebrows.",
-    price: "$5",
-    duration: "10 min",
+      id: 6,
+    name: "Haircut, Beard & Eyebrows",
+    description: "haircut, beard trim, and eyebrow shaping with razor service.",
+    price: "$55",
+    duration: "1 hour",
     category: "beards"
   },
   // Specialty Services
   {
-    id: 9,
-    name: "Haircut & Beard Combo",
+    id: 7,
+    name: "Haircut & Beard",
     description: "Our signature haircut combined with a professional beard trim.",
     price: "$50",
     duration: "45 min",
     category: "specialty"
   },
   {
-    id: 10,
-    name: "Head Shave",
-    description: "Clean head shave with straight razor and hot towel treatment.",
-    price: "$40",
+    id: 8,
+    name: "Haircut & Wash",
+    description: "Refreshing hair wash service with premium products.",
+    price: "$50",
     duration: "30 min",
-    category: "haircuts"
-  },
-  {
-    id: 11,
-    name: "Designs/Graphics",
-    description: "Custom hair designs and graphics tailored to your style.",
-    price: "$5 & up",
-    duration: "15-30 min",
     category: "specialty"
   },
   {
-    id: 12,
-    name: "Hair Wash",
-    description: "Refreshing hair wash service with premium products.",
-    price: "$10",
-    duration: "15 min",
+    id: 9,
+    name: "Womens Haircut",
+    description: "women's haircut service with precision cutting and styling.",
+    price: "Price Varies",
+    duration: "35 min",
     category: "specialty"
   }
 ];
