@@ -133,13 +133,22 @@ const Index = () => {
         {/* Wave divider between Hero and Why Choose Us */}
         <WaveDivider topColor="transparent" bottomColor="#ffffff" className="h-24 -mt-24 relative z-10" />
         
+        {/* Main Content with H1 for SEO */}
+        <section className="py-4 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <h1 className="sr-only">Gary's Barbershop - Premier Barber Services in Maple Shade, New Jersey</h1>
+            </div>
+          </div>
+        </section>
+        
         {/* Why Choose Us Section */}
         <section className="py-24 bg-white" ref={whyChooseUsRef}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="section-heading">Why Choose Us?</h2>
+              <h2 className="section-heading">Why Choose Gary's Barbershop in Maple Shade, NJ?</h2>
               <p className="section-subheading">
-                Experience the difference at Gary's Barbershop
+                Experience the difference at Gary's Barbershop - <a href="/about" className="text-barber-primary hover:underline">34+ years of professional barbering experience</a>
               </p>
             </div>
             
@@ -151,7 +160,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold text-barber-primary text-center mb-4">Expert Craftsmanship</h3>
                 <p className="text-gray-600 text-center">
-                  Our barbers have years of professional experience and are fully certified to deliver precision cuts and styles. <a href="/about" className="text-barber-primary hover:underline">Learn more about our team</a>.
+                  Our master barber has 34+ years of professional experience and is fully certified to deliver precision cuts and styles. <a href="/about" className="text-barber-primary hover:underline">Learn more about Gary's expertise</a> and see our work in the <a href="/gallery" className="text-barber-primary hover:underline">gallery</a>.
                 </p>
               </div>
               
@@ -162,7 +171,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold text-barber-primary text-center mb-4">Premium Experience</h3>
                 <p className="text-gray-600 text-center">
-                  From hot towel shaves to complimentary beverages, we elevate your grooming experience beyond the ordinary. <a href="/services" className="text-barber-primary hover:underline">View our services</a>.
+                  From hot towel shaves to precision beard trims, we elevate your grooming experience beyond the ordinary. <a href="/services" className="text-barber-primary hover:underline">View our complete service menu</a> and read our <a href="/reviews" className="text-barber-primary hover:underline">5-star customer reviews</a>.
                 </p>
               </div>
               
@@ -171,11 +180,22 @@ const Index = () => {
                 <div className="w-16 h-16 mx-auto mb-6 bg-barber-primary/10 rounded-full flex items-center justify-center">
                   <Clock className="h-8 w-8 text-barber-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-barber-primary text-center mb-4">Convenience</h3>
+                <h3 className="text-xl font-bold text-barber-primary text-center mb-4">Convenience & Quality</h3>
                 <p className="text-gray-600 text-center">
-                  Our online booking system makes scheduling easy, and our punctual service respects your valuable time. <a href="/contact" className="text-barber-primary hover:underline">Contact us</a> for more information.
+                  Our appointment-only system ensures no waiting and dedicated attention for each client. <a href="/contact" className="text-barber-primary hover:underline">Contact us to schedule</a> or learn about our <a href="/blogs/how-to-maintain-your-haircut" className="text-barber-primary hover:underline">haircut maintenance tips</a>.
                 </p>
               </div>
+            </div>
+            
+            {/* Additional Content Section */}
+            <div className="mt-16 text-center">
+              <h3 className="text-2xl font-bold text-barber-primary mb-4">Professional Barbering in Maple Shade Since 1992</h3>
+              <p className="text-gray-600 max-w-3xl mx-auto mb-6">
+                Gary's Barbershop has been serving the Maple Shade, New Jersey community for over 30 years. From our original location as "Klippers" at Pennsauken Mart to our current home in Maple Shade, we've built lasting relationships with clients throughout South Jersey and Camden County. <a href="/about" className="text-barber-primary hover:underline">Read our complete story</a> and discover why clients travel from across New Jersey for our expert services.
+              </p>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Whether you need a <a href="/services" className="text-barber-primary hover:underline">classic haircut, modern fade, or professional beard trim</a>, our experienced team delivers exceptional results every time. Check out our <a href="/blogs/choosing-right-haircut-face-shape" className="text-barber-primary hover:underline">guide to choosing the right haircut for your face shape</a> or explore our <a href="/blogs/beard-grooming-guide" className="text-barber-primary hover:underline">complete beard grooming guide</a>.
+              </p>
             </div>
           </div>
         </section>
@@ -192,9 +212,9 @@ const Index = () => {
         <section className="py-20 bg-barber-light" ref={reviewsRef}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="section-heading">What Our Clients Say</h2>
+              <h2 className="section-heading">What Our Maple Shade Clients Say</h2>
               <p className="section-subheading">
-                Don't just take our word for it - hear from our satisfied customers
+                Don't just take our word for it - hear from our satisfied customers throughout New Jersey. <a href="/reviews" className="text-barber-primary hover:underline">Read all our Google reviews</a> to see why we're the top-rated barbershop in Maple Shade.
               </p>
             </div>
             
@@ -272,16 +292,24 @@ const Index = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-barber-primary mb-4">Ready for a Fresh Look?</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Book your appointment today and experience the best haircut in Maple Shade. Visit our <a href="/gallery" className="text-barber-primary hover:underline">gallery</a> to see our work or <a href="/contact" className="text-barber-primary hover:underline">contact us</a> for more information.
+              <h2 className="text-3xl md:text-4xl font-bold text-barber-primary mb-4">Ready for a Fresh Look in Maple Shade, NJ?</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Book your appointment today and experience the best haircut in Maple Shade, New Jersey. With 34+ years of professional barbering experience, Gary's Barbershop delivers exceptional results for clients throughout South Jersey and Camden County.
               </p>
+              <p className="text-gray-600 mb-8">
+                Visit our <a href="/gallery" className="text-barber-primary hover:underline">gallery to see our professional work</a>, explore our <a href="/services" className="text-barber-primary hover:underline">complete service menu and pricing</a>, or <a href="/contact" className="text-barber-primary hover:underline">contact us for more information</a>. Read our <a href="/reviews" className="text-barber-primary hover:underline">5-star Google reviews</a> and discover why we're the top-rated barbershop in Maple Shade.
+              </p>
+              <div className="mb-6">
+                <p className="text-sm text-gray-500 mb-4">
+                  <strong>Expert Grooming Tips:</strong> Learn about <a href="/blogs/how-to-maintain-your-haircut" className="text-barber-primary hover:underline">maintaining your haircut between visits</a>, <a href="/blogs/choosing-right-haircut-face-shape" className="text-barber-primary hover:underline">choosing the right haircut for your face shape</a>, and our <a href="/blogs/beard-grooming-guide" className="text-barber-primary hover:underline">complete beard grooming guide</a>.
+                </p>
+              </div>
               <Button 
                 size="lg"
                 className="bg-barber-primary hover:bg-barber-secondary text-white px-8 py-6 text-lg"
                 onClick={() => window.open("https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services", "_blank")}
               >
-                Book Now
+                Book Your Appointment Now
               </Button>
             </div>
           </div>
