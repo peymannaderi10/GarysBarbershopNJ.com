@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Helmet } from "react-helmet";
+import SEO from "@/components/SEO";
 import ParallaxSection from "@/components/ParallaxSection";
 import { Button } from "@/components/ui/button";
 
@@ -90,19 +90,47 @@ const Reviews = () => {
       clearTimeout(timeout);
     };
   }, []);
+
+  // Structured Data for Reviews Page
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gary's Barbershop",
+    "image": "https://garsbarbershop.com/images/bannerReview.jpg",
+    "url": "https://garsbarbershop.com",
+    "telephone": "(856) 414-1015",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 E Main St",
+      "addressLocality": "Maple Shade",
+      "addressRegion": "NJ",
+      "postalCode": "08052",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.95,
+      "longitude": -74.99
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": rating,
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "150+"
+    }
+  };
   
   return (
     <>
-      <Helmet>
-        <title>Customer Reviews - Gary's Barbershop | Maple Shade, NJ</title>
-        <meta name="description" content="Read what our clients have to say about Gary's Barbershop in Maple Shade, NJ. With a 4.8+ rating, customers love our quality haircuts and service." />
-        <meta name="keywords" content="barbershop reviews, Gary's Barbershop reviews, Maple Shade barbershop, haircut reviews" />
-        <meta property="og:title" content="Customer Reviews - Gary's Barbershop" />
-        <meta property="og:description" content="See what our clients have to say about their experience at Gary's Barbershop in Maple Shade, NJ." />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
+      <SEO
+        title="Customer Reviews - Gary's Barbershop | 4.8+ Star Rating | Maple Shade, NJ"
+        description="Read authentic customer reviews for Gary's Barbershop in Maple Shade, NJ. With a 4.8+ star Google rating, customers love our professional haircuts, friendly service, and expert barber Gary with 34+ years experience."
+        keywords="Gary's Barbershop reviews, customer testimonials, Google reviews, barbershop ratings, Maple Shade barber reviews, professional haircut reviews, 4.8 star barbershop"
+        canonicalUrl="/reviews"
+        ogImage="/images/bannerReview.jpg"
+        structuredData={structuredData}
+      />
       
       <main className="min-h-screen pt-16 overflow-x-hidden">
         {/* Hero Section */}
@@ -149,7 +177,7 @@ const Reviews = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 id="write-review-heading" className="text-2xl md:text-3xl font-bold text-barber-primary mb-3 md:mb-4">Love Your Experience?</h2>
             <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 max-w-2xl mx-auto">
-              We appreciate your feedback! If you enjoyed your visit to Gary's Barbershop, please consider leaving us a review.
+              We appreciate your feedback! If you enjoyed your visit to Gary's Barbershop, please consider leaving us a review. Check out our <a href="/services" className="text-barber-primary hover:underline">services</a> or <a href="/about" className="text-barber-primary hover:underline">learn more about our team</a>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -158,40 +186,17 @@ const Reviews = () => {
               >
                 Leave a Google Review
               </Button>
+              <Button 
+                variant="outline"
+                className="border-barber-primary text-barber-primary hover:bg-barber-primary hover:text-white"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Contact Us
+              </Button>
             </div>
           </div>
         </section>
       </main>
-
-      {/* Structured Data for SEO */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Gary's Barbershop",
-        "image": "/images/bannerReview.jpg",
-        "url": "https://garsbarbershop.com",
-        "telephone": "+18564141015",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "12 E Main St",
-          "addressLocality": "Maple Shade",
-          "addressRegion": "NJ",
-          "postalCode": "08052",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 39.95,
-          "longitude": -74.99
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": rating,
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "100+"
-        }
-      })}} />
     </>
   );
 };

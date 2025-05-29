@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Helmet } from "react-helmet";
+import SEO from "@/components/SEO";
 import ParallaxSection from "@/components/ParallaxSection";
 
 interface GalleryImage {
@@ -115,18 +115,40 @@ const Gallery = () => {
     setSelectedImage(null);
   };
 
+  // Structured Data for Gallery
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Gary's Barbershop Gallery",
+    "description": "Photo gallery showcasing Gary's Barbershop professional work, interior, and satisfied customers in Maple Shade, NJ",
+    "url": "https://garsbarbershop.com/gallery",
+    "image": galleryImages.filter(img => img.src).map(img => `https://garsbarbershop.com${img.src}`),
+    "author": {
+      "@type": "Organization",
+      "name": "Gary's Barbershop",
+      "url": "https://garsbarbershop.com"
+    },
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "Gary's Barbershop",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Maple Shade",
+        "addressRegion": "NJ"
+      }
+    }
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Gallery - Gary's Barbershop | Maple Shade, NJ</title>
-        <meta name="description" content="Browse our gallery showcasing Gary's Barbershop in Maple Shade, NJ. See our professional workspace, quality work, and satisfied customers." />
-        <meta name="keywords" content="Gary's Barbershop gallery, barbershop photos, Maple Shade barber, haircut gallery, professional barbershop" />
-        <meta property="og:title" content="Gallery - Gary's Barbershop" />
-        <meta property="og:description" content="Browse our gallery showcasing Gary's Barbershop in Maple Shade, NJ." />
-        <meta property="og:image" content="/images/gallery1.JPG" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
+      <SEO
+        title="Gallery - Gary's Barbershop | Professional Haircuts & Barbershop Photos | Maple Shade, NJ"
+        description="Browse our gallery showcasing Gary's Barbershop professional work, interior, and satisfied customers in Maple Shade, NJ. See quality haircuts, beard trims, and our modern barbershop atmosphere."
+        keywords="Gary's Barbershop gallery, barbershop photos Maple Shade, professional haircuts gallery, barber work showcase, barbershop interior, before after haircuts, Maple Shade barber photos"
+        canonicalUrl="/gallery"
+        ogImage="/images/gallery1.JPG"
+        structuredData={structuredData}
+      />
       
       <main className="min-h-screen pt-16 overflow-x-hidden">
         {/* Hero Section */}
@@ -155,7 +177,7 @@ const Gallery = () => {
             <div className="text-center mb-8 md:mb-12">
               <h2 id="gallery-heading" className="section-heading">Our Work & Space</h2>
               <p className="section-subheading">
-                See the craftsmanship and atmosphere that defines Gary's Barbershop
+                See the craftsmanship and atmosphere that defines Gary's Barbershop. Visit our <a href="/services" className="text-barber-primary hover:underline">services page</a> to learn more about what we offer.
               </p>
             </div>
             
@@ -216,7 +238,7 @@ const Gallery = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-barber-primary mb-4">Ready to Experience Our Service?</h2>
             <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-              Book your appointment today and become part of our gallery of satisfied customers.
+              Book your appointment today and become part of our gallery of satisfied customers. Learn more <a href="/about" className="text-barber-primary hover:underline">about our team</a> or check out our <a href="/reviews" className="text-barber-primary hover:underline">customer reviews</a>.
             </p>
             <button 
               className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white border border-barber-primary px-8 py-3 rounded-md font-medium transition-colors duration-300"
@@ -257,20 +279,6 @@ const Gallery = () => {
           </div>
         </div>
       )}
-
-      {/* Structured Data for SEO */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "ImageGallery",
-        "name": "Gary's Barbershop Gallery",
-        "description": "Photo gallery showcasing Gary's Barbershop in Maple Shade, NJ",
-        "url": "https://garsbarbershop.com/gallery",
-        "image": "/images/gallery1.JPG",
-        "author": {
-          "@type": "Organization",
-          "name": "Gary's Barbershop"
-        }
-      })}} />
     </>
   );
 };

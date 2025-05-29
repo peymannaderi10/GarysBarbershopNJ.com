@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://garsbarbershop.com/</loc>
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://garsbarbershop.com/images/hero.jpg</image:loc>
+      <image:title>Gary's Barbershop - Premier Barber Services</image:title>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://garsbarbershop.com/about</loc>
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://garsbarbershop.com/images/meetGary.JPG</image:loc>
+      <image:title>Meet Gary - Master Barber with 34+ Years Experience</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://garsbarbershop.com/services</loc>
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://garsbarbershop.com/images/servicesBanner.jpg</image:loc>
+      <image:title>Professional Barbershop Services</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://garsbarbershop.com/gallery</loc>
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://garsbarbershop.com/images/gallery1.JPG</image:loc>
+      <image:title>Gary's Barbershop Gallery - Professional Work Showcase</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Reviews Page -->
+  <url>
+    <loc>https://garsbarbershop.com/reviews</loc>
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://garsbarbershop.com/contact</loc>
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset> 
