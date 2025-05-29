@@ -46,10 +46,10 @@ const Hero = () => {
           style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-            Gary's Barbershop Maple Shade, NJ - Professional Haircuts & Styling
+            Look Sharp. Feel Confident.
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto">
-            Expert cuts, beard trims & hot towel shaves in Maple Shade, New Jersey
+            Expert cuts & styling in Maple Shade, NJ
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
