@@ -118,6 +118,9 @@
           light: '#F7F7F7'    // Light gray
         };
         
+        // Match navbar transition timing
+        let scrollTimeout;
+        
         function updateThemeColor() {
           const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
           const hasScrolled = window.scrollY > 50;
@@ -132,6 +135,12 @@
             color = COLORS.primary;
           }
           
+          // Add transition to match navbar
+          if (!themeColorMeta.hasAttribute('style')) {
+            themeColorMeta.setAttribute('style', 'transition: content 0.3s ease');
+            msTileColorMeta.setAttribute('style', 'transition: content 0.3s ease');
+          }
+          
           themeColorMeta.setAttribute('content', color);
           msTileColorMeta.setAttribute('content', color);
         }
@@ -139,8 +148,14 @@
         // Update on load
         updateThemeColor();
         
-        // Update on scroll
-        window.addEventListener('scroll', updateThemeColor);
+        // Debounced scroll handler to match navbar timing
+        window.addEventListener('scroll', function() {
+          // Clear previous timeout
+          clearTimeout(scrollTimeout);
+          
+          // Set new timeout with a slight delay to match navbar transition
+          scrollTimeout = setTimeout(updateThemeColor, 10);
+        }, { passive: true });
         
         // Update on route change for SPA
         window.addEventListener('popstate', updateThemeColor);
