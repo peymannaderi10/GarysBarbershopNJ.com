@@ -40,7 +40,7 @@ const ChoosingRightHaircutFaceShape = () => {
       <SEO
         title="Choosing the Right Haircut for Your Face Shape | Gary's Barbershop Blog | Maple Shade, NJ"
         description="Learn how to choose the perfect haircut for your face shape with expert advice from Gary's Barbershop. Discover which styles work best for oval, round, square, and other face shapes in Maple Shade, NJ."
-        keywords="haircut face shape, men's haircut guide, face shape haircut, barbershop advice, Gary's Barbershop blog, Maple Shade barber, professional haircut consultation"
+        keywords="haircut face shape, men's haircut guide, face shape haircut, barbershop advice, Gary's Barbershop blog, Maple Shade barber, professional haircut consultation, New Jersey barber, haircut consultation NJ, barber near me South Jersey, men's haircut New Jersey"
         canonicalUrl="/blogs/choosing-right-haircut-face-shape"
         ogImage="/images/garyBanner4.jpg"
         structuredData={structuredData}
@@ -55,7 +55,7 @@ const ChoosingRightHaircutFaceShape = () => {
                 Choosing the Right Haircut for Your Face Shape
               </h1>
               <p className="text-xl text-gray-600 mb-6">
-                Professional guidance to find your perfect style
+                Professional guidance from Gary's Barbershop in Maple Shade, NJ to find your perfect style
               </p>
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
                 <span>By Gary, Master Barber</span>
@@ -70,7 +70,7 @@ const ChoosingRightHaircutFaceShape = () => {
             <div className="mb-12">
               <img 
                 src="/images/garyBanner4.jpg" 
-                alt="Gary providing professional haircut consultation based on face shape"
+                alt="Gary providing professional haircut consultation based on face shape at his Maple Shade, New Jersey barbershop"
                 className="w-full h-64 md:h-96 object-cover object-top rounded-lg shadow-lg"
               />
             </div>
@@ -78,12 +78,12 @@ const ChoosingRightHaircutFaceShape = () => {
             {/* Article Content */}
             <article className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 mb-6">
-                After 34 years of cutting hair at <a href="/" className="text-barber-primary hover:underline">Gary's Barbershop</a>, I've learned that the secret to a great haircut isn't just about following trends—it's about understanding how different styles complement your unique facial features. The right haircut can enhance your best features and create balance, while the wrong one can work against your natural appearance.
+                After 34 years of cutting hair at <a href="/" className="text-barber-primary hover:underline">Gary's Barbershop in Maple Shade, New Jersey</a>, I've learned that the secret to a great haircut isn't just about following trends—it's about understanding how different styles complement your unique facial features. Whether you're searching for a "barber near me" in South Jersey or Camden County, the right haircut can enhance your best features and create balance, while the wrong one can work against your natural appearance.
               </p>
 
               <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">Understanding Your Face Shape</h2>
               <p className="text-gray-700 mb-4">
-                Before we dive into specific haircuts, it's important to identify your face shape. Here's how I help my clients determine theirs:
+                Before we dive into specific haircuts, it's important to identify your face shape. Here's how I help my clients throughout New Jersey determine theirs during our consultation:
               </p>
               <ol className="list-decimal list-inside text-gray-700 mb-6 space-y-2">
                 <li>Stand in front of a mirror with your hair pulled back</li>
@@ -97,7 +97,7 @@ const ChoosingRightHaircutFaceShape = () => {
                 <strong>Characteristics:</strong> Balanced proportions, slightly longer than wide, gently rounded jawline
               </p>
               <p className="text-gray-700 mb-4">
-                Lucky you! Oval faces are considered the ideal shape because they're naturally balanced. Almost any haircut will work, but here are my top recommendations:
+                Lucky you! Oval faces are considered the ideal shape because they're naturally balanced. Almost any haircut will work, but here are my top recommendations for clients visiting our Maple Shade barbershop:
               </p>
               <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
                 <li><strong>Classic side part:</strong> Timeless and professional</li>
@@ -111,7 +111,7 @@ const ChoosingRightHaircutFaceShape = () => {
                 <strong>Characteristics:</strong> Width and length are similar, soft curves, full cheeks
               </p>
               <p className="text-gray-700 mb-4">
-                The goal is to add height and create the illusion of length. Avoid styles that add width to the sides:
+                The goal is to add height and create the illusion of length. This is one of the most common requests I get from clients throughout Camden County and South Jersey. Avoid styles that add width to the sides:
               </p>
               <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
                 <li><strong>High fade with length on top:</strong> Creates vertical lines</li>
@@ -125,7 +125,7 @@ const ChoosingRightHaircutFaceShape = () => {
                 <strong>Characteristics:</strong> Strong jawline, wide forehead, angular features
               </p>
               <p className="text-gray-700 mb-4">
-                The key is to soften the angular features and add some curves or texture:
+                The key is to soften the angular features and add some curves or texture. This approach works well for many of my New Jersey clients with strong facial features:
               </p>
               <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
                 <li><strong>Textured styles:</strong> Soften harsh lines</li>
@@ -178,7 +178,7 @@ const ChoosingRightHaircutFaceShape = () => {
 
               <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">Additional Factors to Consider</h2>
               <p className="text-gray-700 mb-4">
-                Face shape is just one piece of the puzzle. During consultations at Gary's Barbershop, I also consider:
+                Face shape is just one piece of the puzzle. During consultations at Gary's Barbershop in Maple Shade, I also consider factors that are important for clients throughout New Jersey:
               </p>
               
               <h3 className="text-xl font-semibold text-barber-primary mt-6 mb-3">Hair Type and Texture</h3>
@@ -205,9 +205,9 @@ const ChoosingRightHaircutFaceShape = () => {
                 <li>Your comfort level with different styles</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">The Consultation Process</h2>
+              <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">The Consultation Process at Gary's Barbershop</h2>
               <p className="text-gray-700 mb-4">
-                At <a href="/about" className="text-barber-primary hover:underline">Gary's Barbershop</a>, every haircut starts with a thorough consultation. Here's what we discuss:
+                At <a href="/about" className="text-barber-primary hover:underline">Gary's Barbershop in Maple Shade, New Jersey</a>, every haircut starts with a thorough consultation. Whether you're a first-time client searching for a "barber near me" in South Jersey or a regular customer, here's what we discuss:
               </p>
               <ol className="list-decimal list-inside text-gray-700 mb-6 space-y-2">
                 <li>Your face shape and features</li>
@@ -218,13 +218,13 @@ const ChoosingRightHaircutFaceShape = () => {
               </ol>
 
               <p className="text-gray-700 mb-6">
-                Remember, a great haircut is a collaboration between you and your barber. Don't be afraid to ask questions or express your preferences. My goal is to give you a cut that not only looks great but also makes you feel confident and comfortable.
+                Remember, a great haircut is a collaboration between you and your barber. Don't be afraid to ask questions or express your preferences. My goal is to give you a cut that not only looks great but also makes you feel confident and comfortable. Serving clients throughout Camden County and South Jersey, I take pride in helping each person find their perfect style.
               </p>
 
               <div className="bg-barber-light p-6 rounded-lg mt-8">
-                <h3 className="text-xl font-bold text-barber-primary mb-3">Ready for Your Perfect Haircut?</h3>
+                <h3 className="text-xl font-bold text-barber-primary mb-3">Ready for Your Perfect Haircut in New Jersey?</h3>
                 <p className="text-gray-700 mb-4">
-                  Book a consultation at Gary's Barbershop in Maple Shade, NJ. With 34+ years of experience, I'll help you find the perfect style for your face shape and lifestyle.
+                  Book a consultation at Gary's Barbershop in Maple Shade, NJ. With 34+ years of experience serving clients throughout South Jersey and Camden County, I'll help you find the perfect style for your face shape and lifestyle.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 

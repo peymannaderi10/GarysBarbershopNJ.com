@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-barber-primary text-white pt-12 md:pt-16 pb-8 md:pb-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Logo and About */}
           <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1">
             <Link to="/" className="flex items-center mb-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent" aria-label="Go to home page">
@@ -61,6 +61,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
+                  to="/gallery" 
+                  className="text-white hover:text-barber-accent transition-colors inline-block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent"
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link 
                   to="/reviews" 
                   className="text-white hover:text-barber-accent transition-colors inline-block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent"
                 >
@@ -78,35 +86,66 @@ const Footer = () => {
             </ul>
           </nav>
           
+          {/* Blog Links */}
+          <nav className="col-span-1">
+            <h3 className="text-lg font-semibold mb-4 text-white">Blog</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link 
+                  to="/blogs/how-to-maintain-your-haircut" 
+                  className="text-white hover:text-barber-accent transition-colors inline-block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent text-sm"
+                >
+                  Haircut Maintenance
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/blogs/choosing-right-haircut-face-shape" 
+                  className="text-white hover:text-barber-accent transition-colors inline-block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent text-sm"
+                >
+                  Face Shape Guide
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/blogs/beard-grooming-guide" 
+                  className="text-white hover:text-barber-accent transition-colors inline-block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent text-sm"
+                >
+                  Beard Grooming
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          
           {/* Hours */}
           <div className="col-span-1">
             <h3 className="text-lg font-semibold mb-4 text-white">Working Hours</h3>
             <ul className="space-y-2">
-              <li className="flex justify-between text-white">
+              <li className="flex justify-between text-white text-sm">
                 <span>Friday</span>
                 <span>9 AM–7 PM</span>
               </li>
-              <li className="flex justify-between text-white">
+              <li className="flex justify-between text-white text-sm">
                 <span>Saturday</span>
                 <span>9 AM–4 PM</span>
               </li>
-              <li className="flex justify-between text-white">
+              <li className="flex justify-between text-white text-sm">
                 <span>Sunday</span>
                 <span>Closed</span>
               </li>
-              <li className="flex justify-between text-white">
+              <li className="flex justify-between text-white text-sm">
                 <span>Monday</span>
                 <span>Closed</span>
               </li>
-              <li className="flex justify-between text-white">
+              <li className="flex justify-between text-white text-sm">
                 <span>Tuesday</span>
                 <span>9 AM–3 PM</span>
               </li>
-              <li className="flex justify-between text-white">
+              <li className="flex justify-between text-white text-sm">
                 <span>Wednesday</span>
                 <span>9 AM–7 PM</span>
               </li>
-              <li className="flex justify-between text-white">
+              <li className="flex justify-between text-white text-sm">
                 <span>Thursday</span>
                 <span>9 AM–7 PM</span>
               </li>
@@ -121,7 +160,7 @@ const Footer = () => {
                 <span className="mt-1"><Phone size={16} aria-hidden="true" /></span>
                 <a 
                   href="tel:+18564141015"
-                  className="hover:text-barber-accent transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent"
+                  className="hover:text-barber-accent transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent text-sm"
                 >
                   (856) 414-1015
                 </a>
@@ -130,12 +169,12 @@ const Footer = () => {
                 <span className="mt-1"><Mail size={16} aria-hidden="true" /></span>
                 <a 
                   href="mailto:garysbarbershop12@gmail.com"
-                  className="hover:text-barber-accent transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent"
+                  className="hover:text-barber-accent transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent text-sm"
                 >
                   garysbarbershop12@gmail.com
                 </a>
               </p>
-              <p className="text-white">
+              <p className="text-white text-sm">
                 12 E Main St, Maple Shade, NJ 08052
               </p>
             </div>
