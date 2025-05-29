@@ -20,8 +20,8 @@
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     
     <!-- Theme color for mobile browsers -->
-    <meta name="theme-color" content="#F7F7F7" id="theme-color-meta" />
-    <meta name="msapplication-TileColor" content="#F7F7F7" id="ms-tile-color-meta" />
+    <meta name="theme-color" content="#F7F7F7" />
+    <meta name="msapplication-TileColor" content="#F7F7F7" />
 
     <meta property="og:title" content="Gary's Barbershop | Maple Shade, NJ" />
     <meta property="og:description" content="Premier barber services in Maple Shade, New Jersey. Book your appointment today!" />
@@ -106,60 +106,6 @@
         ]
       }
     }
-    </script>
-
-    <script>
-      // Dynamic theme color to match navbar
-      (function() {
-        const themeColorMeta = document.getElementById('theme-color-meta');
-        const msTileColorMeta = document.getElementById('ms-tile-color-meta');
-        const COLORS = {
-          primary: '#241773', // Ravens purple
-          light: '#F7F7F7'    // Light gray
-        };
-        
-        // Match navbar transition timing
-        let scrollTimeout;
-        
-        function updateThemeColor() {
-          const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
-          const hasScrolled = window.scrollY > 50;
-          
-          let color = COLORS.primary; // Default
-          
-          if (hasScrolled) {
-            color = COLORS.light;
-          } else if (isHomePage) {
-            color = 'transparent';
-          } else {
-            color = COLORS.primary;
-          }
-          
-          // Add transition to match navbar
-          if (!themeColorMeta.hasAttribute('style')) {
-            themeColorMeta.setAttribute('style', 'transition: content 0.3s ease');
-            msTileColorMeta.setAttribute('style', 'transition: content 0.3s ease');
-          }
-          
-          themeColorMeta.setAttribute('content', color);
-          msTileColorMeta.setAttribute('content', color);
-        }
-        
-        // Update on load
-        updateThemeColor();
-        
-        // Debounced scroll handler to match navbar timing
-        window.addEventListener('scroll', function() {
-          // Clear previous timeout
-          clearTimeout(scrollTimeout);
-          
-          // Set new timeout with a slight delay to match navbar transition
-          scrollTimeout = setTimeout(updateThemeColor, 10);
-        }, { passive: true });
-        
-        // Update on route change for SPA
-        window.addEventListener('popstate', updateThemeColor);
-      })();
     </script>
   </head>
 
