@@ -11,6 +11,7 @@ interface ServiceItem {
   price: string;
   duration: string;
   category: "haircuts" | "beards" | "specialty";
+  bookingUrl: string;
 }
 
 const allServices: ServiceItem[] = [
@@ -21,7 +22,8 @@ const allServices: ServiceItem[] = [
     description: "Traditional haircut with clippers and scissors including a hot towel neck shave.",
     price: "$40",
     duration: "30 min",
-    category: "haircuts"
+    category: "haircuts",
+    bookingUrl: "https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services/NWNL6XNAZP5QWTTGPA4MWYSB"
   },
   {
     id: 2,
@@ -29,7 +31,8 @@ const allServices: ServiceItem[] = [
     description: "Traditional haircut with clippers and scissors for clients 62 years and older.",
     price: "$30",
     duration: "30 min",
-    category: "haircuts"
+    category: "haircuts",
+    bookingUrl: "https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services/3EMY6RDAX54BC2VWM3EFRTWZ"
   },
   {
     id: 3,
@@ -37,7 +40,8 @@ const allServices: ServiceItem[] = [
     description: "Quick shape up service to keep your hairline looking fresh and clean.",
     price: "Price Varies",
     duration: "30 min",
-    category: "haircuts"
+    category: "haircuts",
+    bookingUrl: "https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services/HK5AIVTW6A745DBGGN7ZMDIL"
   },
   // Beard Services
   {
@@ -46,7 +50,8 @@ const allServices: ServiceItem[] = [
     description: "Shape and define your beard with precision trimming and styling.",
     price: "Price Varies",
     duration: "30 min",
-    category: "beards"
+    category: "beards",
+    bookingUrl: "https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services/ZM7Y66KYBXMJ63UD7RGJ7BWA"
   },
   {
     id: 5,
@@ -54,24 +59,27 @@ const allServices: ServiceItem[] = [
     description: "Traditional straight razor shave with hot towels and premium products.",
     price: "$25",
     duration: "30 min",
-    category: "beards"
+    category: "beards",
+    bookingUrl: "https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services/FQJJIDWSWJY2KI7JDRXBXQTH"
   },
   {
       id: 6,
-    name: "Haircut, Beard & Eyebrows",
-    description: "haircut, beard trim, and eyebrow shaping with razor service.",
+    name: "Haircut, Beard & Eyebrows Combo",
+    description: "Complete grooming package including haircut, beard trim, and eyebrow shaping with razor service.",
     price: "$55",
     duration: "1 hour",
-    category: "beards"
+    category: "beards",
+    bookingUrl: "https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services/7I5AIVBIXYC4ULRIBOGLWXBH"
   },
   // Specialty Services
   {
     id: 7,
-    name: "Haircut & Beard",
+    name: "Haircut & Beard Combo",
     description: "Our signature haircut combined with a professional beard trim.",
     price: "$50",
     duration: "45 min",
-    category: "specialty"
+    category: "specialty",
+    bookingUrl: "https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services/GMUCHER6YAB6TIUOUVUNSA6R"
   },
   {
     id: 8,
@@ -79,7 +87,8 @@ const allServices: ServiceItem[] = [
     description: "Refreshing hair wash service with premium products.",
     price: "$50",
     duration: "30 min",
-    category: "specialty"
+    category: "specialty",
+    bookingUrl: "https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services/RARYTPLZYJWZSC6LFGRORCRV"
   },
   {
     id: 9,
@@ -87,7 +96,8 @@ const allServices: ServiceItem[] = [
     description: "women's haircut service with precision cutting and styling.",
     price: "Price Varies",
     duration: "35 min",
-    category: "specialty"
+    category: "specialty",
+    bookingUrl: "https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services/FUVB2ADNPTHOUIODZ6N7C6YP"
   }
 ];
 
@@ -263,7 +273,7 @@ const Services = () => {
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <Button 
                     className="w-full bg-barber-primary hover:bg-barber-primary/90"
-                    onClick={() => window.open("https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services", "_blank")}
+                    onClick={() => window.open(service.bookingUrl, "_blank")}
                   >
                     Book Now
                   </Button>
