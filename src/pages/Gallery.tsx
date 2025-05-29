@@ -240,6 +240,9 @@ const Gallery = () => {
             <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
               Book your appointment today and become part of our gallery of satisfied customers. Learn more <a href="/about" className="text-barber-primary hover:underline">about our team</a> or check out our <a href="/reviews" className="text-barber-primary hover:underline">customer reviews</a>.
             </p>
+            <p className="text-sm text-gray-600 mb-6 max-w-2xl mx-auto">
+              For inspiration on your next haircut, explore our guides on <a href="/blogs/choosing-right-haircut-face-shape" className="text-barber-primary hover:underline">choosing the right haircut for your face shape</a> or learn about <a href="/blogs/how-to-maintain-your-haircut" className="text-barber-primary hover:underline">maintaining your haircut between visits</a>.
+            </p>
             <button 
               className="bg-barber-primary hover:bg-white hover:text-barber-primary text-white border border-barber-primary px-8 py-3 rounded-md font-medium transition-colors duration-300"
               onClick={() => window.open("https://book.squareup.com/appointments/a1a1vs0akopii2/location/1XT9J9JGTM29G/services", "_blank")}

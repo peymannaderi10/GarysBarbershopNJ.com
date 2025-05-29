@@ -141,6 +141,13 @@ const Contact = () => {
                   Gary provides personalized service with 34+ years of experience. Check out our <a href="/gallery" className="text-barber-primary hover:underline">gallery</a> to see examples of our work and read <a href="/reviews" className="text-barber-primary hover:underline">customer reviews</a> to learn about other clients' experiences.
                 </p>
               </div>
+              
+              <div className="bg-barber-light p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-barber-primary mb-2">How do I prepare for my appointment?</h3>
+                <p className="text-gray-600">
+                  Come with clean, dry hair and have a general idea of the style you want. For style inspiration, check out our guides on <a href="/blogs/choosing-right-haircut-face-shape" className="text-barber-primary hover:underline">choosing the right haircut for your face shape</a> or browse our <a href="/blogs/beard-grooming-guide" className="text-barber-primary hover:underline">complete beard grooming guide</a>. Gary will work with you to achieve the perfect cut for your lifestyle.
+                </p>
+              </div>
             </div>
           </div>
         </section>

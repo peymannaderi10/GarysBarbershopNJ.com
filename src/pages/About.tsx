@@ -295,6 +295,9 @@ const About = () => {
                   <p className="text-gray-600 mb-4 text-sm md:text-base">
                     After 34 years in the business, Gary stays current with trends through hair shows, conventions, and staying connected with the barbering community. He cuts all hair types and handles everyone from kids to seniors with the same friendly, professional approach.
                   </p>
+                  <p className="text-gray-700 mb-4 text-sm md:text-base">
+                    Gary's commitment to excellence is reflected in his ongoing education and connection to the professional barbering community. Read our expert guides on <a href="/blogs/choosing-right-haircut-face-shape" className="text-barber-primary hover:underline">choosing the right haircut for your face shape</a> and <a href="/blogs/beard-grooming-guide" className="text-barber-primary hover:underline">complete beard grooming techniques</a>.
+                  </p>
                   <p className="text-gray-600 mb-6 text-sm md:text-base">
                     This recently renovated shop, featuring Baltimore Ravens purple and gray colors, provides a trusted place where the Maple Shade community knows they'll always get exceptional haircuts in a pleasant, clean atmosphere - and right on time for their appointment. <a href="/contact" className="text-barber-primary hover:underline">Contact us</a> to schedule your visit or read our <a href="/reviews" className="text-barber-primary hover:underline">customer reviews</a>.
                   </p>

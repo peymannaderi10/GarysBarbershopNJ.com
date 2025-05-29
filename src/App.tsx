@@ -12,6 +12,10 @@ import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
+// Blog imports
+import HowToMaintainYourHaircut from "./pages/blogs/HowToMaintainYourHaircut";
+import ChoosingRightHaircutFaceShape from "./pages/blogs/ChoosingRightHaircutFaceShape";
+import BeardGroomingGuide from "./pages/blogs/BeardGroomingGuide";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +35,10 @@ const App = () => (
               <Route path="/reviews" element={<Reviews />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
+              {/* Blog Routes */}
+              <Route path="/blogs/how-to-maintain-your-haircut" element={<HowToMaintainYourHaircut />} />
+              <Route path="/blogs/choosing-right-haircut-face-shape" element={<ChoosingRightHaircutFaceShape />} />
+              <Route path="/blogs/beard-grooming-guide" element={<BeardGroomingGuide />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

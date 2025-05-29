@@ -327,6 +327,9 @@ const Services = () => {
                 <p className="text-gray-700 mb-4">
                   If this is your first visit to Gary's Barbershop, please arrive 10 minutes early to discuss your preferences and expectations with your barber. Learn more <a href="/about" className="text-barber-primary hover:underline">about our experienced team</a> and see examples of our work in our <a href="/gallery" className="text-barber-primary hover:underline">gallery</a>.
                 </p>
+                <p className="text-gray-700 mb-4">
+                  For tips on maintaining your haircut between visits, check out our guide on <a href="/blogs/how-to-maintain-your-haircut" className="text-barber-primary hover:underline">how to maintain your haircut between visits</a> or learn about <a href="/blogs/choosing-right-haircut-face-shape" className="text-barber-primary hover:underline">choosing the right haircut for your face shape</a>.
+                </p>
               </div>
             </div>
           </div>
