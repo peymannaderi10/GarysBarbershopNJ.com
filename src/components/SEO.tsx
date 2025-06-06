@@ -58,7 +58,7 @@ const SEO = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content="Gary's Barbershop" />
+      <meta name="author" content="Gary's Barber Shop" />
       <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
       
       {/* Canonical URL */}
@@ -72,7 +72,7 @@ const SEO = ({
       <meta property="og:image" content={fullOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Gary's Barbershop" />
+      <meta property="og:site_name" content="Gary's Barber Shop" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}

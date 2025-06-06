@@ -1,8 +1,8 @@
-# Gary's Barbershop Website
+# Gary's Barber Shop Website
 
 ## Project Overview
 
-This is the official website for Gary's Barbershop, a premier barbershop located in Maple Shade, NJ. The site showcases the services offered, the story behind the business, and allows customers to view reviews and make appointments.
+This is the official website for Gary's Barber Shop, a premier barbershop located in Maple Shade, NJ. The site showcases the services offered, the story behind the business, and allows customers to view reviews and make appointments.
 
 ## Features
 
@@ -34,7 +34,7 @@ To run this project locally, you'll need Node.js and npm installed.
 git clone <YOUR_GIT_URL>
 
 # Navigate to the project directory
-cd Garys-Barbershop
+cd Garys-Barber Shop
 
 # Install dependencies
 npm install

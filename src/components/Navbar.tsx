@@ -59,7 +59,7 @@ const Navbar = () => {
             Gary's <span className={cn(
               "transition-colors duration-300",
               scrolled ? "text-barber-secondary" : "text-white"
-            )}>Barbershop</span>
+            )}>Barber Shop</span>
           </h1>
         </Link>
         

@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1">
             <Link to="/" className="flex items-center mb-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-barber-accent" aria-label="Go to home page">
               <h2 className="font-heading text-xl md:text-2xl font-bold text-white">
-                Gary's Barbershop
+                Gary's Barber Shop
               </h2>
             </Link>
             <p className="text-white mb-4">
@@ -182,7 +182,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 md:mt-10 pt-6 md:pt-8 text-center text-white">
-          <p>&copy; {currentYear} Gary's Barbershop. All rights reserved.</p>
+          <p>&copy; {currentYear} Gary's Barber Shop. All rights reserved.</p>
         </div>
       </div>
 
@@ -190,7 +190,7 @@ const Footer = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BarberShop",
-        "name": "Gary's Barbershop",
+        "name": "Gary's Barber Shop",
         "url": "https://garsbarbershop.com",
         "logo": "https://garsbarbershop.com/logo.png",
         "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1",

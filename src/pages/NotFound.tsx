@@ -5,8 +5,8 @@ const NotFound = () => {
   return (
     <>
       <SEO
-        title="Page Not Found - Gary's Barbershop | Maple Shade, NJ"
-        description="The page you're looking for doesn't exist. Visit Gary's Barbershop homepage to explore our professional barber services in Maple Shade, NJ."
+        title="Page Not Found - Gary's Barber Shop | Maple Shade, NJ"
+        description="The page you're looking for doesn't exist. Visit Gary's Barber Shop homepage to explore our professional barber services in Maple Shade, NJ."
         canonicalUrl="/404"
         noindex={true}
       />
