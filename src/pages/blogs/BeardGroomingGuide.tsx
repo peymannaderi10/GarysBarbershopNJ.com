@@ -10,20 +10,20 @@ const BeardGroomingGuide = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Complete Beard Grooming Guide: Professional Tips from Gary's Barbershop",
-    "description": "Master beard grooming with expert advice from Gary's Barbershop. Learn proper trimming techniques, maintenance routines, and styling tips for the perfect beard.",
+    "headline": "Complete Beard Grooming Guide: Professional Tips from Gary's Barber Shop",
+    "description": "Master beard grooming with expert advice from Gary's Barber Shop. Learn proper trimming techniques, maintenance routines, and styling tips for the perfect beard.",
     "author": {
       "@type": "Person",
       "name": "Gary",
       "jobTitle": "Master Barber",
       "worksFor": {
         "@type": "LocalBusiness",
-        "name": "Gary's Barbershop"
+        "name": "Gary's Barber Shop"
       }
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Gary's Barbershop",
+      "name": "Gary's Barber Shop",
       "url": "https://garsbarbershop.com"
     },
     "datePublished": "2025-01-05",
@@ -38,9 +38,9 @@ const BeardGroomingGuide = () => {
   return (
     <>
       <SEO
-        title="Complete Beard Grooming Guide | Gary's Barbershop Blog | Maple Shade, NJ"
-        description="Master beard grooming with expert tips from Gary's Barbershop. Learn proper trimming, maintenance routines, styling techniques, and product recommendations for the perfect beard in Maple Shade, NJ."
-        keywords="beard grooming, beard trimming, beard maintenance, facial hair care, Gary's Barbershop blog, Maple Shade barber, professional beard trim, New Jersey beard trimming, beard grooming NJ, barber near me South Jersey, facial hair New Jersey"
+        title="Complete Beard Grooming Guide | Gary's Barber Shop Blog | Maple Shade, NJ"
+        description="Master beard grooming with expert tips from Gary's Barber Shop. Learn proper trimming, maintenance routines, styling techniques, and product recommendations for the perfect beard in Maple Shade, NJ."
+        keywords="beard grooming, beard trimming, beard maintenance, facial hair care, Gary's Barber Shop blog, Maple Shade barber, professional beard trim, New Jersey beard trimming, beard grooming NJ, barber near me South Jersey, facial hair New Jersey"
         canonicalUrl="/blogs/beard-grooming-guide"
         ogImage="/images/gallery6.PNG"
         structuredData={structuredData}
@@ -55,7 +55,7 @@ const BeardGroomingGuide = () => {
                 Complete Beard Grooming Guide
               </h1>
               <p className="text-xl text-gray-600 mb-6">
-                Professional tips from Gary's Barbershop in Maple Shade, NJ for maintaining the perfect beard
+                Professional tips from Gary's Barber Shop in Maple Shade, NJ for maintaining the perfect beard
               </p>
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
                 <span>By Gary, Master Barber</span>
@@ -70,7 +70,7 @@ const BeardGroomingGuide = () => {
             <div className="mb-12">
               <img 
                 src="/images/galleryBanner.jpg" 
-                alt="Professional beard trimming and grooming services at Gary's Barbershop in Maple Shade, New Jersey"
+                alt="Professional beard trimming and grooming services at Gary's Barber Shop in Maple Shade, New Jersey"
                 className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
               />
             </div>
@@ -78,7 +78,7 @@ const BeardGroomingGuide = () => {
             {/* Article Content */}
             <article className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 mb-6">
-                A well-groomed beard is more than just facial hair—it's a statement of style and sophistication. After 34 years at <a href="/" className="text-barber-primary hover:underline">Gary's Barbershop in Maple Shade, New Jersey</a>, I've helped countless men throughout South Jersey and Camden County achieve the perfect beard. Whether you're growing your first beard or looking to refine your grooming routine, or searching for "beard trimming near me" in New Jersey, this comprehensive guide will help you maintain a beard that looks professional and feels comfortable.
+                A well-groomed beard is more than just facial hair—it's a statement of style and sophistication. After 34 years at <a href="/" className="text-barber-primary hover:underline">Gary's Barber Shop in Maple Shade, New Jersey</a>, I've helped countless men throughout South Jersey and Camden County achieve the perfect beard. Whether you're growing your first beard or looking to refine your grooming routine, or searching for "beard trimming near me" in New Jersey, this comprehensive guide will help you maintain a beard that looks professional and feels comfortable.
               </p>
 
               <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">Understanding Beard Growth Phases</h2>
@@ -226,7 +226,7 @@ const BeardGroomingGuide = () => {
               </ul>
 
               <p className="text-gray-700 mb-4">
-                At <a href="/services" className="text-barber-primary hover:underline">Gary's Barbershop in Maple Shade, New Jersey</a>, I offer professional beard trimming services that include hot towel treatments and precise shaping. Regular professional maintenance every 2-4 weeks keeps your beard looking its best. For those searching "beard trimming near me" in New Jersey, we're conveniently located and serve clients throughout the region.
+                At <a href="/services" className="text-barber-primary hover:underline">Gary's Barber Shop in Maple Shade, New Jersey</a>, I offer professional beard trimming services that include hot towel treatments and precise shaping. Regular professional maintenance every 2-4 weeks keeps your beard looking its best. For those searching "beard trimming near me" in New Jersey, we're conveniently located and serve clients throughout the region.
               </p>
 
               <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">Seasonal Beard Care in New Jersey</h2>
@@ -250,7 +250,7 @@ const BeardGroomingGuide = () => {
               <div className="bg-barber-light p-6 rounded-lg mt-8">
                 <h3 className="text-xl font-bold text-barber-primary mb-3">Professional Beard Services in Maple Shade, NJ</h3>
                 <p className="text-gray-700 mb-4">
-                  Ready to take your beard game to the next level? Visit Gary's Barbershop in Maple Shade, New Jersey for professional beard trimming, hot towel treatments, and expert styling advice. Serving clients throughout South Jersey and Camden County with 34+ years of experience.
+                  Ready to take your beard game to the next level? Visit Gary's Barber Shop in Maple Shade, New Jersey for professional beard trimming, hot towel treatments, and expert styling advice. Serving clients throughout South Jersey and Camden County with 34+ years of experience.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -287,7 +287,7 @@ const BeardGroomingGuide = () => {
 
             {/* Back to Home */}
             <div className="mt-8 text-center">
-              <a href="/" className="text-barber-primary hover:underline">← Back to Gary's Barbershop</a>
+              <a href="/" className="text-barber-primary hover:underline">← Back to Gary's Barber Shop</a>
             </div>
           </div>
         </div>

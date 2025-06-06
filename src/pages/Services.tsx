@@ -144,7 +144,7 @@ const Services = () => {
     "@type": "Service",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Gary's Barbershop",
+      "name": "Gary's Barber Shop",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Maple Shade",
@@ -153,7 +153,7 @@ const Services = () => {
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Barbershop Services",
+      "name": "Barber Shop Services",
       "itemListElement": allServices.map(service => ({
         "@type": "Offer",
         "itemOffered": {
@@ -170,9 +170,9 @@ const Services = () => {
   return (
     <>
       <SEO
-        title="Services & Pricing - Gary's Barbershop | Professional Haircuts, Beard Trims & Hot Towel Shaves | Maple Shade, NJ"
-        description="Explore Gary's Barbershop services in Maple Shade, NJ. Professional haircuts ($40), beard trims ($25), hot towel shaves ($25), specialty cuts, and more. Expert barber with 34+ years experience. Book your appointment today!"
-        keywords="barbershop services Maple Shade, haircut prices NJ, beard trim, hot towel shave, professional barber services, men's grooming, specialty haircuts, bald fade, Gary's Barbershop pricing"
+        title="Services & Pricing - Gary's Barber Shop | Professional Haircuts, Beard Trims & Hot Towel Shaves | Maple Shade, NJ"
+        description="Explore Gary's Barber Shop services in Maple Shade, NJ. Professional haircuts ($40), beard trims ($25), hot towel shaves ($25), specialty cuts, and more. Expert barber with 34+ years experience. Book your appointment today!"
+        keywords="Barber Shop services Maple Shade, haircut prices NJ, beard trim, hot towel shave, professional barber services, men's grooming, specialty haircuts, bald fade, Gary's Barber Shop pricing"
         canonicalUrl="/services"
         ogImage="/images/garyBanner4.jpg"
         structuredData={structuredData}
@@ -311,7 +311,7 @@ const Services = () => {
               <div className="mt-8 bg-barber-light p-6 rounded-lg">
                 <h4 className="font-bold text-lg mb-2">First Time Client?</h4>
                 <p className="text-gray-700 mb-4">
-                  If this is your first visit to Gary's Barbershop, please arrive 10 minutes early to discuss your preferences and expectations with your barber. Learn more <a href="/about" className="text-barber-primary hover:underline">about our experienced team</a> and see examples of our work in our <a href="/gallery" className="text-barber-primary hover:underline">gallery</a>.
+                  If this is your first visit to Gary's Barber Shop, please arrive 10 minutes early to discuss your preferences and expectations with your barber. Learn more <a href="/about" className="text-barber-primary hover:underline">about our experienced team</a> and see examples of our work in our <a href="/gallery" className="text-barber-primary hover:underline">gallery</a>.
                 </p>
                 <p className="text-gray-700 mb-4">
                   For tips on maintaining your haircut between visits, check out our guide on <a href="/blogs/how-to-maintain-your-haircut" className="text-barber-primary hover:underline">how to maintain your haircut between visits</a> or learn about <a href="/blogs/choosing-right-haircut-face-shape" className="text-barber-primary hover:underline">choosing the right haircut for your face shape</a>.
@@ -326,7 +326,7 @@ const Services = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready for a Great Haircut?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Book your appointment online and experience the best barbershop in Maple Shade. Read our <a href="/reviews" className="text-barber-primary hover:underline">customer reviews</a> or <a href="/contact" className="text-barber-primary hover:underline">contact us</a> for more information.
+              Book your appointment online and experience the best Barber Shop in Maple Shade. Read our <a href="/reviews" className="text-barber-primary hover:underline">customer reviews</a> or <a href="/contact" className="text-barber-primary hover:underline">contact us</a> for more information.
             </p>
             <Button 
               size="lg"

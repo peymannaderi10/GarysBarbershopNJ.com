@@ -95,7 +95,7 @@ const Reviews = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Gary's Barbershop",
+    "name": "Gary's Barber Shop",
     "image": "https://garsbarbershop.com/images/bannerReview.jpg",
     "url": "https://garsbarbershop.com",
     "telephone": "(856) 414-1015",
@@ -124,9 +124,9 @@ const Reviews = () => {
   return (
     <>
       <SEO
-        title="Customer Reviews - Gary's Barbershop | 4.8+ Star Rating | Maple Shade, NJ"
-        description="Read authentic customer reviews for Gary's Barbershop in Maple Shade, NJ. With a 4.8+ star Google rating, customers love our professional haircuts, friendly service, and expert barber Gary with 34+ years experience."
-        keywords="Gary's Barbershop reviews, customer testimonials, Google reviews, barbershop ratings, Maple Shade barber reviews, professional haircut reviews, 4.8 star barbershop"
+        title="Customer Reviews - Gary's Barber Shop | 4.8+ Star Rating | Maple Shade, NJ"
+        description="Read authentic customer reviews for Gary's Barber Shop in Maple Shade, NJ. With a 4.8+ star Google rating, customers love our professional haircuts, friendly service, and expert barber Gary with 34+ years experience."
+        keywords="Gary's Barber Shop reviews, customer testimonials, Google reviews, Barber Shop ratings, Maple Shade barber reviews, professional haircut reviews, 4.8 star Barber Shop"
         canonicalUrl="/reviews"
         ogImage="/images/bannerReview.jpg"
         structuredData={structuredData}
@@ -177,7 +177,7 @@ const Reviews = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 id="write-review-heading" className="text-2xl md:text-3xl font-bold text-barber-primary mb-3 md:mb-4">Love Your Experience?</h2>
             <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 max-w-2xl mx-auto">
-              We appreciate your feedback! If you enjoyed your visit to Gary's Barbershop, please consider leaving us a review. Check out our <a href="/services" className="text-barber-primary hover:underline">services</a> or <a href="/about" className="text-barber-primary hover:underline">learn more about our team</a>.
+              We appreciate your feedback! If you enjoyed your visit to Gary's Barber Shop, please consider leaving us a review. Check out our <a href="/services" className="text-barber-primary hover:underline">services</a> or <a href="/about" className="text-barber-primary hover:underline">learn more about our team</a>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 

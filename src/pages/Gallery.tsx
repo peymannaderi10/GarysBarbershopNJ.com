@@ -13,7 +13,7 @@ const galleryImages: GalleryImage[] = [
   {
     id: 1,
     src: "/images/gallery1.JPG",
-    alt: "Gary's Barbershop interior and styling",
+    alt: "Gary's Barber Shop interior and styling",
     title: "Our Professional Space"
   },
   {
@@ -37,7 +37,7 @@ const galleryImages: GalleryImage[] = [
   {
     id: 5,
     src: "/images/gallery5.jpeg",
-    alt: "Modern barbershop atmosphere",
+    alt: "Modern Barber Shop atmosphere",
     title: "Modern Atmosphere"
   },
   {
@@ -67,7 +67,7 @@ const galleryImages: GalleryImage[] = [
   {
     id: 10,
     src: "/images/gallery10.jpg",
-    alt: "Gary's Barbershop showcase",
+    alt: "Gary's Barber Shop showcase",
     title: "Our Showcase"
   },
 ];
@@ -119,18 +119,18 @@ const Gallery = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
-    "name": "Gary's Barbershop Gallery",
-    "description": "Photo gallery showcasing Gary's Barbershop professional work, interior, and satisfied customers in Maple Shade, NJ",
+    "name": "Gary's Barber Shop Gallery",
+    "description": "Photo gallery showcasing Gary's Barber Shop professional work, interior, and satisfied customers in Maple Shade, NJ",
     "url": "https://garsbarbershop.com/gallery",
     "image": galleryImages.filter(img => img.src).map(img => `https://garsbarbershop.com${img.src}`),
     "author": {
       "@type": "Organization",
-      "name": "Gary's Barbershop",
+      "name": "Gary's Barber Shop",
       "url": "https://garsbarbershop.com"
     },
     "mainEntity": {
       "@type": "LocalBusiness",
-      "name": "Gary's Barbershop",
+      "name": "Gary's Barber Shop",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Maple Shade",
@@ -142,9 +142,9 @@ const Gallery = () => {
   return (
     <>
       <SEO
-        title="Gallery - Gary's Barbershop | Professional Haircuts & Barbershop Photos | Maple Shade, NJ"
-        description="Browse our gallery showcasing Gary's Barbershop professional work, interior, and satisfied customers in Maple Shade, NJ. See quality haircuts, beard trims, and our modern barbershop atmosphere."
-        keywords="Gary's Barbershop gallery, barbershop photos Maple Shade, professional haircuts gallery, barber work showcase, barbershop interior, before after haircuts, Maple Shade barber photos"
+        title="Gallery - Gary's Barber Shop | Professional Haircuts & Barber Shop Photos | Maple Shade, NJ"
+        description="Browse our gallery showcasing Gary's Barber Shop professional work, interior, and satisfied customers in Maple Shade, NJ. See quality haircuts, beard trims, and our modern Barber Shop atmosphere."
+        keywords="Gary's Barber Shop gallery, Barber Shop photos Maple Shade, professional haircuts gallery, barber work showcase, Barber Shop interior, before after haircuts, Maple Shade barber photos"
         canonicalUrl="/gallery"
         ogImage="/images/gallery1.JPG"
         structuredData={structuredData}
@@ -177,7 +177,7 @@ const Gallery = () => {
             <div className="text-center mb-8 md:mb-12">
               <h2 id="gallery-heading" className="section-heading">Our Work & Space</h2>
               <p className="section-subheading">
-                See the craftsmanship and atmosphere that defines Gary's Barbershop. Visit our <a href="/services" className="text-barber-primary hover:underline">services page</a> to learn more about what we offer.
+                See the craftsmanship and atmosphere that defines Gary's Barber Shop. Visit our <a href="/services" className="text-barber-primary hover:underline">services page</a> to learn more about what we offer.
               </p>
             </div>
             

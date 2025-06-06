@@ -10,20 +10,20 @@ const HowToMaintainYourHaircut = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "How to Maintain Your Haircut Between Barbershop Visits",
-    "description": "Expert tips from Gary's Barbershop on maintaining your haircut, extending its life, and keeping it looking fresh between professional visits.",
+    "headline": "How to Maintain Your Haircut Between Barber Shop Visits",
+    "description": "Expert tips from Gary's Barber Shop on maintaining your haircut, extending its life, and keeping it looking fresh between professional visits.",
     "author": {
       "@type": "Person",
       "name": "Gary",
       "jobTitle": "Master Barber",
       "worksFor": {
         "@type": "LocalBusiness",
-        "name": "Gary's Barbershop"
+        "name": "Gary's Barber Shop"
       }
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Gary's Barbershop",
+      "name": "Gary's Barber Shop",
       "url": "https://garsbarbershop.com"
     },
     "datePublished": "2025-01-15",
@@ -38,9 +38,9 @@ const HowToMaintainYourHaircut = () => {
   return (
     <>
       <SEO
-        title="How to Maintain Your Haircut Between Visits | Gary's Barbershop Blog | Maple Shade, NJ"
-        description="Learn expert tips from Gary's Barbershop on maintaining your haircut between visits. Discover proper washing techniques, styling tips, and when to schedule your next appointment in Maple Shade, NJ."
-        keywords="haircut maintenance, men's grooming tips, barbershop advice, hair care between cuts, Gary's Barbershop blog, Maple Shade barber tips, New Jersey barber, haircut maintenance NJ, barber near me Maple Shade, men's grooming New Jersey"
+        title="How to Maintain Your Haircut Between Visits | Gary's Barber Shop Blog | Maple Shade, NJ"
+        description="Learn expert tips from Gary's Barber Shop on maintaining your haircut between visits. Discover proper washing techniques, styling tips, and when to schedule your next appointment in Maple Shade, NJ."
+        keywords="haircut maintenance, men's grooming tips, Barber Shop advice, hair care between cuts, Gary's Barber Shop blog, Maple Shade barber tips, New Jersey barber, haircut maintenance NJ, barber near me Maple Shade, men's grooming New Jersey"
         canonicalUrl="/blogs/how-to-maintain-your-haircut"
         ogImage="/images/bannerReview.jpg"
         structuredData={structuredData}
@@ -52,10 +52,10 @@ const HowToMaintainYourHaircut = () => {
             {/* Header */}
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold text-barber-primary mb-4">
-                How to Maintain Your Haircut Between Barbershop Visits
+                How to Maintain Your Haircut Between Barber Shop Visits
               </h1>
               <p className="text-xl text-gray-600 mb-6">
-                Expert tips from Gary's Barbershop in Maple Shade, NJ to keep your cut looking fresh
+                Expert tips from Gary's Barber Shop in Maple Shade, NJ to keep your cut looking fresh
               </p>
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
                 <span>By Gary, Master Barber</span>
@@ -70,7 +70,7 @@ const HowToMaintainYourHaircut = () => {
             <div className="mb-12">
               <img 
                 src="/images/bannerReview.jpg" 
-                alt="Professional haircut maintenance tips from Gary's Barbershop in Maple Shade, New Jersey"
+                alt="Professional haircut maintenance tips from Gary's Barber Shop in Maple Shade, New Jersey"
                 className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
               />
             </div>
@@ -78,12 +78,12 @@ const HowToMaintainYourHaircut = () => {
             {/* Article Content */}
             <article className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 mb-6">
-                Getting a great haircut is just the beginning. With 34+ years of experience serving clients throughout New Jersey at <a href="/" className="text-barber-primary hover:underline">Gary's Barbershop in Maple Shade</a>, I've learned that proper maintenance between visits is crucial for keeping your style looking sharp and extending the life of your cut. Whether you're searching for a "barber near me" in South Jersey or already a loyal client, these tips will help you maintain that fresh-from-the-barbershop look.
+                Getting a great haircut is just the beginning. With 34+ years of experience serving clients throughout New Jersey at <a href="/" className="text-barber-primary hover:underline">Gary's Barber Shop in Maple Shade</a>, I've learned that proper maintenance between visits is crucial for keeping your style looking sharp and extending the life of your cut. Whether you're searching for a "barber near me" in South Jersey or already a loyal client, these tips will help you maintain that fresh-from-the-Barber Shop look.
               </p>
 
               <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">The First 48 Hours: Critical Care Period</h2>
               <p className="text-gray-700 mb-4">
-                The first two days after your haircut are crucial, whether you've visited our Maple Shade barbershop or any quality barber in New Jersey. Your hair needs time to settle into its new shape, and how you treat it during this period affects how long your style will last.
+                The first two days after your haircut are crucial, whether you've visited our Maple Shade Barber Shop or any quality barber in New Jersey. Your hair needs time to settle into its new shape, and how you treat it during this period affects how long your style will last.
               </p>
               <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
                 <li>Avoid washing your hair for at least 24 hours to let the cut settle</li>
@@ -94,7 +94,7 @@ const HowToMaintainYourHaircut = () => {
 
               <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">Proper Washing Techniques for New Jersey's Climate</h2>
               <p className="text-gray-700 mb-4">
-                How you wash your hair significantly impacts how long your cut looks fresh. Living in New Jersey means dealing with varying humidity and weather conditions, so here's what I recommend to my clients at Gary's Barbershop:
+                How you wash your hair significantly impacts how long your cut looks fresh. Living in New Jersey means dealing with varying humidity and weather conditions, so here's what I recommend to my clients at Gary's Barber Shop:
               </p>
               <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
                 <li><strong>Frequency:</strong> Wash every 2-3 days unless you have very oily hair (NJ humidity can affect this)</li>
@@ -150,16 +150,16 @@ const HowToMaintainYourHaircut = () => {
 
               <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">Professional Touch-Ups in South Jersey</h2>
               <p className="text-gray-700 mb-4">
-                Sometimes you need a quick professional touch-up between full cuts. At Gary's Barbershop in Maple Shade, we offer <a href="/services" className="text-barber-primary hover:underline">line-up services</a> to keep your edges crisp and clean. For those searching "barber near me" in Camden County or surrounding New Jersey areas, we're conveniently located and serve clients from throughout South Jersey.
+                Sometimes you need a quick professional touch-up between full cuts. At Gary's Barber Shop in Maple Shade, we offer <a href="/services" className="text-barber-primary hover:underline">line-up services</a> to keep your edges crisp and clean. For those searching "barber near me" in Camden County or surrounding New Jersey areas, we're conveniently located and serve clients from throughout South Jersey.
               </p>
               <p className="text-gray-700 mb-6">
-                Remember, a good haircut is an investment in your appearance and confidence. Proper maintenance ensures you get the maximum value from each visit to your trusted New Jersey barbershop.
+                Remember, a good haircut is an investment in your appearance and confidence. Proper maintenance ensures you get the maximum value from each visit to your trusted New Jersey Barber Shop.
               </p>
 
               <div className="bg-barber-light p-6 rounded-lg mt-8">
                 <h3 className="text-xl font-bold text-barber-primary mb-3">Ready for Your Next Cut in Maple Shade, NJ?</h3>
                 <p className="text-gray-700 mb-4">
-                  Don't wait until your haircut looks overgrown. Schedule your next appointment at Gary's Barbershop in Maple Shade, New Jersey, and keep looking your best. Serving clients throughout South Jersey with 34+ years of professional barbering experience.
+                  Don't wait until your haircut looks overgrown. Schedule your next appointment at Gary's Barber Shop in Maple Shade, New Jersey, and keep looking your best. Serving clients throughout South Jersey with 34+ years of professional barbering experience.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -196,7 +196,7 @@ const HowToMaintainYourHaircut = () => {
 
             {/* Back to Home */}
             <div className="mt-8 text-center">
-              <a href="/" className="text-barber-primary hover:underline">← Back to Gary's Barbershop</a>
+              <a href="/" className="text-barber-primary hover:underline">← Back to Gary's Barber Shop</a>
             </div>
           </div>
         </div>

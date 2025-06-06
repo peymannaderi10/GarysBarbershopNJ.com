@@ -55,9 +55,9 @@ const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Gary's Barbershop",
+    "name": "Gary's Barber Shop",
     "image": "https://garsbarbershop.com/images/gallery1.JPG",
-    "description": "Premier barbershop in Maple Shade, NJ offering professional haircuts, beard trims, hot towel shaves, and styling services. Expert barbers with years of experience.",
+    "description": "Premier Barber Shop in Maple Shade, NJ offering professional haircuts, beard trims, hot towel shaves, and styling services. Expert barbers with years of experience.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "123 Main Street",
@@ -86,7 +86,7 @@ const Index = () => {
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Barbershop Services",
+      "name": "Barber Shop Services",
       "itemListElement": [
         {
           "@type": "Offer",
@@ -119,9 +119,9 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="Gary's Barbershop | Premier Barber Services in Maple Shade, NJ | Professional Haircuts & Styling"
-        description="Experience the best barbershop in Maple Shade, NJ. Gary's Barbershop offers professional haircuts, beard trims, hot towel shaves, and styling services. Expert barbers with 30+ years experience. Book your appointment today!"
-        keywords="barbershop Maple Shade NJ, professional haircuts, beard trim, hot towel shave, men's grooming, barber services, hair styling, traditional barbershop, Gary's Barbershop"
+        title="Gary's Barber Shop | Premier Barber Services in Maple Shade, NJ | Professional Haircuts & Styling"
+        description="Experience the best Barber Shop in Maple Shade, NJ. Gary's Barber Shop offers professional haircuts, beard trims, hot towel shaves, and styling services. Expert barbers with 30+ years experience. Book your appointment today!"
+        keywords="Barber Shop Maple Shade NJ, professional haircuts, beard trim, hot towel shave, men's grooming, barber services, hair styling, traditional Barber Shop, Gary's Barber Shop"
         canonicalUrl="/"
         ogImage="/images/hero.jpg"
         structuredData={structuredData}
@@ -139,7 +139,7 @@ const Index = () => {
             <div className="text-center mb-16">
               <h2 className="section-heading">Why Choose Us?</h2>
               <p className="section-subheading">
-                Experience the difference at Gary's Barbershop
+                Experience the difference at Gary's Barber Shop
               </p>
             </div>
             
@@ -248,7 +248,7 @@ const Index = () => {
                 <div className="relative overflow-hidden rounded-lg shadow-xl h-full max-h-[600px]">
                   <img 
                       src="/images/homepageRating.JPG" 
-                    alt="Satisfied client at Gary's Barbershop showing 5-star Google rating" 
+                    alt="Satisfied client at Gary's Barber Shop showing 5-star Google rating" 
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-700 lg:translate-y-[-20%]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-barber-primary/70 to-transparent flex items-end">

@@ -11,19 +11,19 @@ const ChoosingRightHaircutFaceShape = () => {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Choosing the Right Haircut for Your Face Shape",
-    "description": "Professional guide from Gary's Barbershop on selecting the perfect haircut that complements your facial features and enhances your natural appearance.",
+    "description": "Professional guide from Gary's Barber Shop on selecting the perfect haircut that complements your facial features and enhances your natural appearance.",
     "author": {
       "@type": "Person",
       "name": "Gary",
       "jobTitle": "Master Barber",
       "worksFor": {
         "@type": "LocalBusiness",
-        "name": "Gary's Barbershop"
+        "name": "Gary's Barber Shop"
       }
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Gary's Barbershop",
+      "name": "Gary's Barber Shop",
       "url": "https://garsbarbershop.com"
     },
     "datePublished": "2025-01-10",
@@ -38,9 +38,9 @@ const ChoosingRightHaircutFaceShape = () => {
   return (
     <>
       <SEO
-        title="Choosing the Right Haircut for Your Face Shape | Gary's Barbershop Blog | Maple Shade, NJ"
-        description="Learn how to choose the perfect haircut for your face shape with expert advice from Gary's Barbershop. Discover which styles work best for oval, round, square, and other face shapes in Maple Shade, NJ."
-        keywords="haircut face shape, men's haircut guide, face shape haircut, barbershop advice, Gary's Barbershop blog, Maple Shade barber, professional haircut consultation, New Jersey barber, haircut consultation NJ, barber near me South Jersey, men's haircut New Jersey"
+        title="Choosing the Right Haircut for Your Face Shape | Gary's Barber Shop Blog | Maple Shade, NJ"
+        description="Learn how to choose the perfect haircut for your face shape with expert advice from Gary's Barber Shop. Discover which styles work best for oval, round, square, and other face shapes in Maple Shade, NJ."
+        keywords="haircut face shape, men's haircut guide, face shape haircut, barbershop advice, Gary's Barber Shop blog, Maple Shade barber, professional haircut consultation, New Jersey barber, haircut consultation NJ, barber near me South Jersey, men's haircut New Jersey"
         canonicalUrl="/blogs/choosing-right-haircut-face-shape"
         ogImage="/images/garyBanner4.jpg"
         structuredData={structuredData}
@@ -55,7 +55,7 @@ const ChoosingRightHaircutFaceShape = () => {
                 Choosing the Right Haircut for Your Face Shape
               </h1>
               <p className="text-xl text-gray-600 mb-6">
-                Professional guidance from Gary's Barbershop in Maple Shade, NJ to find your perfect style
+                Professional guidance from Gary's Barber Shop in Maple Shade, NJ to find your perfect style
               </p>
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
                 <span>By Gary, Master Barber</span>
@@ -78,7 +78,7 @@ const ChoosingRightHaircutFaceShape = () => {
             {/* Article Content */}
             <article className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 mb-6">
-                After 34 years of cutting hair at <a href="/" className="text-barber-primary hover:underline">Gary's Barbershop in Maple Shade, New Jersey</a>, I've learned that the secret to a great haircut isn't just about following trends—it's about understanding how different styles complement your unique facial features. Whether you're searching for a "barber near me" in South Jersey or Camden County, the right haircut can enhance your best features and create balance, while the wrong one can work against your natural appearance.
+                After 34 years of cutting hair at <a href="/" className="text-barber-primary hover:underline">Gary's Barber Shop in Maple Shade, New Jersey</a>, I've learned that the secret to a great haircut isn't just about following trends—it's about understanding how different styles complement your unique facial features. Whether you're searching for a "barber near me" in South Jersey or Camden County, the right haircut can enhance your best features and create balance, while the wrong one can work against your natural appearance.
               </p>
 
               <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">Understanding Your Face Shape</h2>
@@ -178,7 +178,7 @@ const ChoosingRightHaircutFaceShape = () => {
 
               <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">Additional Factors to Consider</h2>
               <p className="text-gray-700 mb-4">
-                Face shape is just one piece of the puzzle. During consultations at Gary's Barbershop in Maple Shade, I also consider factors that are important for clients throughout New Jersey:
+                Face shape is just one piece of the puzzle. During consultations at Gary's Barber Shop in Maple Shade, I also consider factors that are important for clients throughout New Jersey:
               </p>
               
               <h3 className="text-xl font-semibold text-barber-primary mt-6 mb-3">Hair Type and Texture</h3>
@@ -205,9 +205,9 @@ const ChoosingRightHaircutFaceShape = () => {
                 <li>Your comfort level with different styles</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">The Consultation Process at Gary's Barbershop</h2>
+              <h2 className="text-2xl font-bold text-barber-primary mt-8 mb-4">The Consultation Process at Gary's Barber Shop</h2>
               <p className="text-gray-700 mb-4">
-                At <a href="/about" className="text-barber-primary hover:underline">Gary's Barbershop in Maple Shade, New Jersey</a>, every haircut starts with a thorough consultation. Whether you're a first-time client searching for a "barber near me" in South Jersey or a regular customer, here's what we discuss:
+                At <a href="/about" className="text-barber-primary hover:underline">Gary's Barber Shop in Maple Shade, New Jersey</a>, every haircut starts with a thorough consultation. Whether you're a first-time client searching for a "barber near me" in South Jersey or a regular customer, here's what we discuss:
               </p>
               <ol className="list-decimal list-inside text-gray-700 mb-6 space-y-2">
                 <li>Your face shape and features</li>
@@ -224,7 +224,7 @@ const ChoosingRightHaircutFaceShape = () => {
               <div className="bg-barber-light p-6 rounded-lg mt-8">
                 <h3 className="text-xl font-bold text-barber-primary mb-3">Ready for Your Perfect Haircut in New Jersey?</h3>
                 <p className="text-gray-700 mb-4">
-                  Book a consultation at Gary's Barbershop in Maple Shade, NJ. With 34+ years of experience serving clients throughout South Jersey and Camden County, I'll help you find the perfect style for your face shape and lifestyle.
+                  Book a consultation at Gary's Barber Shop in Maple Shade, NJ. With 34+ years of experience serving clients throughout South Jersey and Camden County, I'll help you find the perfect style for your face shape and lifestyle.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -261,7 +261,7 @@ const ChoosingRightHaircutFaceShape = () => {
 
             {/* Back to Home */}
             <div className="mt-8 text-center">
-              <a href="/" className="text-barber-primary hover:underline">← Back to Gary's Barbershop</a>
+              <a href="/" className="text-barber-primary hover:underline">← Back to Gary's Barber Shop</a>
             </div>
           </div>
         </div>

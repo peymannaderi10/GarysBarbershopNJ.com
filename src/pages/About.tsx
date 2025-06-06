@@ -33,7 +33,7 @@ const storyItems: StoryItem[] = [
     id: 4,
     year: "2003",
     title: "A New Chapter",
-    description: "When the Pennsauken Mart was torn down for apartments, Gary chose to stay in the area and opened Gary's Barbershop in Maple Shade, bringing his loyal clientele to a new home."
+    description: "When the Pennsauken Mart was torn down for apartments, Gary chose to stay in the area and opened Gary's Barber Shop in Maple Shade, bringing his loyal clientele to a new home."
   },
   {
     id: 5,
@@ -100,7 +100,7 @@ const About = () => {
     "@type": "AboutPage",
     "mainEntity": {
       "@type": "LocalBusiness",
-      "name": "Gary's Barbershop",
+      "name": "Gary's Barber Shop",
       "founder": {
         "@type": "Person",
         "name": "Gary",
@@ -113,16 +113,16 @@ const About = () => {
         "addressLocality": "Maple Shade",
         "addressRegion": "NJ"
       },
-      "description": "Gary's Barbershop has been serving the community since 1992, starting as Klippers at Pennsauken Mart and moving to Maple Shade in 2003. Specializing in professional men's grooming with 34+ years of experience."
+      "description": "Gary's Barber Shop has been serving the community since 1992, starting as Klippers at Pennsauken Mart and moving to Maple Shade in 2003. Specializing in professional men's grooming with 34+ years of experience."
     }
   };
   
   return (
     <>
       <SEO
-        title="About Gary's Barbershop | Master Barber with 34+ Years Experience | Maple Shade, NJ"
-        description="Meet Gary, master barber with 34+ years experience serving Maple Shade, NJ. From Klippers at Pennsauken Mart in 1992 to Gary's Barbershop since 2003. Specializing in bald fades, crisp lineups, and traditional barbering."
-        keywords="Gary's Barbershop about, master barber Maple Shade, 34 years experience, barbershop history, Klippers Pennsauken Mart, professional barber, bald fade specialist, traditional barbering"
+        title="About Gary's Barber Shop | Master Barber with 34+ Years Experience | Maple Shade, NJ"
+        description="Meet Gary, master barber with 34+ years experience serving Maple Shade, NJ. From Klippers at Pennsauken Mart in 1992 to Gary's Barber Shop since 2003. Specializing in bald fades, crisp lineups, and traditional barbering."
+        keywords="Gary's Barber Shop about, master barber Maple Shade, 34 years experience, barbershop history, Klippers Pennsauken Mart, professional barber, bald fade specialist, traditional barbering"
         canonicalUrl="/about"
         ogImage="/images/garyBannerAbout.JPG"
         structuredData={structuredData}
@@ -206,7 +206,7 @@ const About = () => {
                     <div className="relative overflow-hidden rounded-lg shadow-xl hover-scale">
                       <img 
                         src="/images/Klippers.JPG" 
-                        alt="Gary holding his original Klippers barbershop sign from Pennsauken Mart" 
+                        alt="Gary holding his original Klippers Barber Shop sign from Pennsauken Mart" 
                         className="w-full h-auto rounded-lg"
                         width="600"
                         height="800"
@@ -287,7 +287,7 @@ const About = () => {
                 <div>
                   <h2 id="philosophy-heading" className="text-2xl md:text-3xl font-bold text-barber-primary mb-4">Our Philosophy</h2>
                   <p className="text-gray-600 mb-4 text-sm md:text-base">
-                    At Gary's Barbershop, we believe a great haircut comes down to three things: a blurry fade, a crisp lineup, and having a laugh while you're in the chair.
+                    At Gary's Barber Shop, we believe a great haircut comes down to three things: a blurry fade, a crisp lineup, and having a laugh while you're in the chair.
                   </p>
                   <p className="text-gray-600 mb-4 text-sm md:text-base">
                     Gary approaches each new client by carefully assessing their hair texture, previous style, head shape, and styling preferences. Whether you use product or prefer a natural look, he'll work with you to create the perfect cut for your lifestyle. <a href="/services" className="text-barber-primary hover:underline">Explore our services</a> to see what we offer.
@@ -311,7 +311,7 @@ const About = () => {
                 <div className="relative h-80 md:h-96 overflow-hidden">
                   <img 
                     src="/images/philosphy.JPG" 
-                    alt="Gary's Barbershop interior showing professional workspace and Baltimore Ravens themed decor" 
+                    alt="Gary's Barber Shop interior showing professional workspace and Baltimore Ravens themed decor" 
                     className="object-cover w-full h-full rounded-lg shadow-xl hover-scale"
                     width="800"
                     height="600"
